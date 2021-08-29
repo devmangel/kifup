@@ -1,0 +1,50 @@
+.welcome{
+
+    margin-top: 40px;
+    padding: 0px 5%;
+
+    h1{
+        font-size: 2.5rem;
+        text-align: center;
+        font-weight: 600;
+        color: var(--primary);
+    }
+    p{
+        margin-top: 10px;
+        font-size: 1.4rem;
+        text-align: center;
+        font-weight: 300;
+    }
+
+    .welcome__social-media{
+
+        display: flex;
+        justify-content: center;
+        height: 400px;
+
+
+
+        .social-media__list{
+
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 20px;
+            
+            
+            a{
+                font-size: 1.8rem;
+                font-weight: 400;
+                height: 35px;
+                width: 200px;
+                color: var(--primary);
+                text-align: center;
+                margin: 10px auto;
+                border: var(--thrid) 2px solid;
+                border-radius: 10px;
+                text-decoration: none;
+                align-self: center;
+            }
+        }
+    }
+}

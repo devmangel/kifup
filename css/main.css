@@ -1,0 +1,130 @@
+:root {
+  --primary: #F2D544;
+  --secundary: #313A40;
+  --thrid: #A60321;
+  --fourth: #F2C166;
+  --fifth: #F2D06B;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  color: var(--fifth);
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, var(--secundary)), color-stop(200%, var(--fifth)));
+  background: linear-gradient(to right bottom, var(--secundary) 50%, var(--fifth) 200%);
+  height: 100vh;
+}
+
+.header {
+  font-weight: bold;
+  opacity: 1;
+}
+
+.header .nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  margin: 5px;
+}
+
+.header .nav-bar h1 {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 2.2rem;
+  margin-left: 5px;
+  font-weight: 300;
+}
+
+.header .nav-bar .bar-icon_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  right: 5%;
+  top: 3.5%;
+  background-color: var(--primary);
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.header .nav-bar .bar-icon_container .nav-bar__icon {
+  font-size: 1.6rem;
+  color: var(--thrid);
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.welcome {
+  margin-top: 40px;
+  padding: 0px 5%;
+}
+
+.welcome h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.welcome p {
+  margin-top: 10px;
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: 300;
+}
+
+.welcome .welcome__social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 400px;
+}
+
+.welcome .welcome__social-media .social-media__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.welcome .welcome__social-media .social-media__list a {
+  font-size: 1.8rem;
+  font-weight: 400;
+  height: 35px;
+  width: 200px;
+  color: var(--primary);
+  text-align: center;
+  margin: 10px auto;
+  border: var(--thrid) 2px solid;
+  border-radius: 10px;
+  text-decoration: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+/*# sourceMappingURL=main.css.map */

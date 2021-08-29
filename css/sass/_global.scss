@@ -1,0 +1,26 @@
+:root{
+
+    --primary: #F2D544;
+    --secundary: #313A40;
+    --thrid: #A60321;
+    --fourth: #F2C166;
+    --fifth: #F2D06B;
+}
+
+
+*{
+
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 62.5%;
+    color: var(--fifth);
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: linear-gradient(to right bottom, var(--secundary) 50%, var(--fifth) 200%);
+    height: 100vh;
+}
