@@ -22,7 +22,6 @@ html {
 body {
   background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, var(--secundary)), color-stop(200%, var(--fifth)));
   background: linear-gradient(to right bottom, var(--secundary) 50%, var(--fifth) 200%);
-  height: 100vh;
 }
 
 .header {
@@ -65,10 +64,11 @@ body {
 
 .header .nav-bar .bar-icon_container .nav-bar__icon {
   font-size: 1.6rem;
-  color: var(--thrid);
+  color: var(--secundary);
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  text-decoration: none;
 }
 
 .welcome {
@@ -97,7 +97,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 400px;
 }
 
 .welcome .welcome__social-media .social-media__list {
@@ -117,11 +116,12 @@ body {
   font-weight: 400;
   height: 35px;
   width: 200px;
-  color: var(--fourth);
-  background-color: var(--thrid);
+  color: var(--primary);
+  background-color: var(--secundary);
+  -webkit-box-shadow: 1px 1px 15px var(--thrid);
+          box-shadow: 1px 1px 15px var(--thrid);
   text-align: center;
   margin: 10px auto;
-  border: var(--thrid) 2px solid;
   border-radius: 10px;
   text-decoration: none;
   -ms-flex-item-align: center;
@@ -130,10 +130,70 @@ body {
   outline: none;
 }
 
-.welcome .welcome__social-media .social-media__list a .icon-facebook {
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  background: url(../../images/facebook.svg);
+.video-chat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.video-chat .video-chat__btn {
+  width: 150px;
+  background-color: var(--primary);
+  border-radius: 5px;
+}
+
+.video-chat .video-chat__btn .btn-tittle {
+  font-weight: 600;
+  color: var(--secundary);
+  text-align: center;
+  font-size: 1.4rem;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8px;
+}
+
+.admin-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 40px 0px;
+}
+
+.admin-message .form-feedback {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.admin-message .form-feedback .admin-message__tittle {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0px 5px;
+}
+
+.admin-message .form-feedback .admin-message__input {
+  background: var(--primary);
+  width: 200px;
+  outline: none;
+}
+
+.admin-message .form-feedback .admin-message__btn {
+  margin-left: 5px;
+  border-radius: 10px;
+  padding: 5px;
+  background: var(--thrid);
+  color: var(--primary);
 }
 /*# sourceMappingURL=main.css.map */

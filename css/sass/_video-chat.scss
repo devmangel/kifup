@@ -1,0 +1,64 @@
+.video-chat{
+
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+
+
+    .video-chat__btn{
+
+        width: 150px;
+        background-color: var(--primary);
+        border-radius: 5px;
+        
+        
+        .btn-tittle{
+            
+            font-weight: 600;
+            color: var(--secundary);
+            text-align: center;
+            font-size: 1.4rem;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            padding: 8px;
+    
+        }
+    }
+}
+
+.admin-message{
+
+    display: flex;
+    align-content: center;
+    margin: 40px 0px;
+
+
+    .form-feedback{
+
+        display: flex;
+
+        .admin-message__tittle{
+
+            align-self: center;
+            margin: 0px 5px;
+        }
+
+        .admin-message__input{
+
+            background: var(--primary);
+            width: 200px;
+            outline: none;
+        }
+
+        .admin-message__btn{
+
+            margin-left: 5px;
+            border-radius: 10px;
+            padding: 5px;
+            background: var(--thrid);
+            color: var(--primary);
+        }
+    }
+}
