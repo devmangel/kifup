@@ -117,7 +117,8 @@ body {
   font-weight: 400;
   height: 35px;
   width: 200px;
-  color: var(--primary);
+  color: var(--fourth);
+  background-color: var(--thrid);
   text-align: center;
   margin: 10px auto;
   border: var(--thrid) 2px solid;
@@ -126,5 +127,13 @@ body {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  outline: none;
+}
+
+.welcome .welcome__social-media .social-media__list a .icon-facebook {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background: url(../../images/facebook.svg);
 }
 /*# sourceMappingURL=main.css.map */
