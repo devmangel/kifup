@@ -50,3 +50,44 @@
         }
     }
 }
+
+@media screen and(min-width: 600px){
+
+    .header .nav-bar{
+
+        margin-left: 8%;
+    }
+
+    .header .nav-bar .bar-icon_container { 
+
+        right: 15%;
+        width: 100px;
+
+    
+    }
+
+    footer{
+
+        width: 80%;
+        margin: 0 auto;
+
+        
+    }
+
+    .admin-message .form-feedback{
+
+        justify-content: center;
+        width: 100%;
+    }
+
+    .admin-message .form-feedback .admin-message__input{
+
+        
+        margin: 0px 30px;
+    }
+
+    .admin-message .form-feedback .admin-message__btn{
+
+        width: 100px;
+    }
+}

@@ -22,6 +22,7 @@ html {
 body {
   background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, var(--secundary)), color-stop(200%, var(--fifth)));
   background: linear-gradient(to right bottom, var(--secundary) 50%, var(--fifth) 200%);
+  height: 800px;
 }
 
 .header {
@@ -130,6 +131,32 @@ body {
   outline: none;
 }
 
+@media screen and (min-width: 600px) {
+  .header .nav-bar {
+    margin-left: 8%;
+  }
+  .header .nav-bar .bar-icon_container {
+    right: 15%;
+    width: 100px;
+  }
+  footer {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .admin-message .form-feedback {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .admin-message .form-feedback .admin-message__input {
+    margin: 0px 30px;
+  }
+  .admin-message .form-feedback .admin-message__btn {
+    width: 100px;
+  }
+}
+
 .video-chat {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -165,8 +192,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  text-align: center;
   margin: 40px 0px;
 }
 
