@@ -1,2 +1,0 @@
-# kifup
-Free to practice
