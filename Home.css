@@ -100,6 +100,47 @@ Rojo Logo #e85f63
 
 }
 
+.nav-item-list{
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: black;
+  width: 100%;
+}
+
+.item__list{
+
+  margin-bottom: 30px;
+  box-shadow: 1px 1px 5px black;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.u-sidenav-overflow{
+
+  background-color: #89d0ca;
+  font-weight: 500;
+
+}
+
+.menu-close__credits{
+
+  border: solid red 2px;
+  margin-top: 50px;
+  height: 200px;
+  padding: 0 15px;
+  color: black;
+}
+
+
+.team-name-container a {
+
+  color: black;
+}
+
+
+
 @media screen and (min-width: 768px){
 
     .u-layout-row{
