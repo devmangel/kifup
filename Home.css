@@ -126,17 +126,25 @@ Rojo Logo #e85f63
 
 .menu-close__credits{
 
-  border: solid red 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
   margin-top: 50px;
   height: 200px;
-  padding: 0 15px;
+  padding: 0 30px;
   color: black;
 }
 
 
-.team-name-container a {
+.menu-close__credits a {
 
   color: black;
+}
+
+.menu-close__credits h5{
+
+  font-weight: bold;
 }
 
 
