@@ -1,3 +1,8 @@
+/* 
+Verde Logo #89d0ca
+Rojo Logo #e85f63
+ */
+
 .u-section-1 {
   min-height: 731px;
   background-image: url("images/f11de0f4-f885-ea85-b5cd-4a7f2abced16.jpg");
@@ -89,14 +94,37 @@
   padding: 30px;
 }
 
-@media screen and(max-width: 768){
+.u-container-layout .fix-tittle{
+
+  text-align: center;
+
+}
+
+@media screen and (min-width: 768px){
 
     .u-layout-row{
       
-      border: solid purple 3px;
       width: 100%;
     }
+
+    .img__header{
+
+      left: 20px;
+    }
+    
+    .u-logo{
+  
+        left: 100px;
+    }
+
+    .u-container-style .u-container-layout .fix-subtittle{
+
+      text-align: center;
+    }
+  
 }
+
+
 /* Footer  */
 
 
@@ -156,12 +184,33 @@
     width: 70%;
   }
   
+  .u-logo{
+
+      left: 100px;
+  }
+
+
   .img__header{
 
     left: 30px;
     position: absolute;
     top: 25px;
   }
+
+  .u-container-layout .fix-tittle{
+
+    text-align: left;
+  }
+
+  .u-container-style .u-container-layout .fix-subtittle{
+
+    text-align: left;
+  }
+}
+
+@media screen and(min-width: ){
+
+
 }
 
 @media (max-width: 1199px) {
