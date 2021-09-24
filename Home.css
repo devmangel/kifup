@@ -80,6 +80,8 @@ Rojo Logo #e85f63
   background-image: url("images/-min.jpg");
   background-position: 0% 50%;
   min-height: 731px;
+  position: relative;
+  left: 0%;
 }
 
 .u-image-1{
@@ -146,7 +148,6 @@ Rojo Logo #e85f63
 
   font-weight: bold;
 }
-
 
 
 @media screen and (min-width: 768px){
@@ -332,7 +333,7 @@ Rojo Logo #e85f63
   }
 
   .u-section-1 .u-container-layout-2 {
-    padding-left: 10px;
+    padding-left: 0;
     padding-right: 10px;
   }
 }
@@ -1179,7 +1180,6 @@ Rojo Logo #e85f63
 .u-section-6 .u-image-4 {
   min-height: 383px;
   width: 100%;
-  border: 5px solid red;
   background-image: url("images/w3-min.jpg");
   background-position: 50% 50%;
 }
