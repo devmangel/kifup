@@ -95,8 +95,13 @@ Rojo Logo #e85f63
   left: 35px;
 }
 
+.u-container-layout-2 a{
+
+  width: 200px;
+}
+
 .u-section-1 .u-container-layout-2 {
-  padding: 30px;
+  padding: 10px;
 }
 
 .u-container-layout .fix-tittle{
@@ -150,6 +155,12 @@ Rojo Logo #e85f63
 .menu-close__credits h5{
 
   font-weight: bold;
+}
+
+.u-layout-cell-2 .container-layout-2 .putos{
+
+  width: 500px;
+  border: blue solid 2px;
 }
 
 
@@ -368,17 +379,17 @@ Rojo Logo #e85f63
 }
 
 .u-section-2 .u-container-layout-1 {
-  padding: 0 30px;
+  padding: 0 10px;
 }
 
 .u-section-2 .u-shape-1 {
-  width: 406px;
+  width: 400px;
   height: 406px;
   margin: 0 0 0 auto;
 }
 
 .u-section-2 .u-image-1 {
-  width: 427px;
+  width: 400px;
   height: 427px;
   background-image: url("images/wef-min.jpg");
   background-position: 50% 50%;
