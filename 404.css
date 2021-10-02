@@ -1,3 +1,22 @@
+body{
+
+  height: 600px;
+}
+
+.img__header{
+
+  margin-top: 2%;
+  margin-right: 10px;
+}
+
+.logo-design{
+
+  margin-left: 50px;
+  font-size: 35px;
+  font-weight: bold;
+  color: #5fbaa7;
+}
+
 .u-section-1 {
   background-image: url("images/e4.jpg");
   background-position: 50% 50%;
