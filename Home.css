@@ -2,7 +2,10 @@
 Verde Logo #89d0ca
 Rojo Logo #e85f63
  */
+.logo-design:hover{
 
+  color: #e85f63;
+}
 .u-section-1 {
   min-height: 731px;
   background-image: url("images/f11de0f4-f885-ea85-b5cd-4a7f2abced16.jpg");
@@ -256,6 +259,7 @@ Rojo Logo #e85f63
 
     text-align: left;
   }
+}
 
 
 @media (max-width: 1199px) {
