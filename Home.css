@@ -163,24 +163,60 @@ Rojo Logo #e85f63
   border: blue solid 2px;
 }
 
-.temp2020{
-
-  border: red solid 2px;
-  height: 200px;
-  width: 100%;
-
-}
-
-
 #message-5a14{
 
     height: 150px;
 }
+#form-tittle{
 
-.temp555{
-
-  border: red solid 1px;
+  text-transform: none;
 }
+
+.counter{
+
+  text-align: center;
+  margin: 10px 0px;
+}
+
+#days{
+
+  font-size: 30px;
+  font-weight: bold;
+  color: #89d0ca;
+}
+
+#hours{
+
+  font-size: 30px;
+  font-weight: bold;
+  color: #89d0ca;
+}
+
+#minutes{
+
+  font-size: 30px;
+  font-weight: bold;
+  color: #89d0ca;
+}
+
+#seconds{
+
+  font-size: 30px;
+  font-weight: bold;
+  color: #89d0ca;
+}
+
+.clic-here{
+
+  text-align: center;
+}
+
+.clic-here a{
+
+  color: #89d0ca;
+  font-weight: bold;
+}
+
 @media screen and (min-width: 768px){
 
     .u-layout-row{
