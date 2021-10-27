@@ -167,6 +167,13 @@ Rojo Logo #e85f63
 
     height: 150px;
 }
+
+#btn-send{
+
+  border: solid 1px red;
+}
+
+
 #form-tittle{
 
   text-transform: none;
@@ -201,7 +208,7 @@ Rojo Logo #e85f63
 
 #seconds{
 
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
   color: #89d0ca;
 }
