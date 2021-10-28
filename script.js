@@ -43,3 +43,30 @@ function updateCountdown() {
 updateCountdown();
 // Refresh every second
 setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
+
+// Alert when subit registration form
+
+function messageConfirmation(){
+
+    let getEmail = document.getElementById("message-5a105").value;
+    let getMessage = document.getElementById("message-5a100").value;
+
+        if(getEmail.length != 0 && getMessage.length != 0){
+
+            
+            document.getElementById("message-5a105").innerHTML = " ";
+            document.getElementById("message-5a100").innerHTML = " ";
+
+            document.getElementById("btn-send").innerHTML = "¡Registro Exitoso!";
+            document.getElementById("btn-send").style.color = "red";
+            
+        }
+
+};
+
+function limpiar(){
+
+    setTimeout('document.formreg.reset()',100);
+
+    return false;
+}

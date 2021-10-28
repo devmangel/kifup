@@ -129,17 +129,17 @@
                   </h1>
                   <p class="u-text u-text-grey-50 u-text-3">Tenemos sesiones de practica sin costo todos los viernes, ¡registrate!.</p>
 
-                  <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdWa46tJ3XGYoQrWHSDiJhEu4AroJhwIFKeDGUdaZzTUyRYGg/formResponse" method="POST" class="u-clearfix u-form-spacing-28 u-form-vertical u-inner-form" style="padding: 10px" enctype="text/plain">
+                  <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdWa46tJ3XGYoQrWHSDiJhEu4AroJhwIFKeDGUdaZzTUyRYGg/formResponse" method="POST" class="u-clearfix u-form-spacing-28 u-form-vertical u-inner-form" style="padding: 10px" enctype="text/plain" onsubmit="return limpiar()" name="formreg">
                     <div class="u-form-group u-form-name u-form-group-1">
                       <label for="name-5a14" class="u-form-control-hidden u-label" wfd-invisible="true"></label>
-                      <input autocomplete="email" type="email" placeholder="Escribe tu email" name="entry.912903458" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-white" required="">
+                      <input autocomplete="email" type="email" placeholder="Escribe tu email" name="entry.912903458" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-white" required="" id="message-5a105">
                     </div>
                     <div class="u-form-group u-form-message u-form-group-3">
                       <label for="message-5a14" class="u-form-control-hidden u-label" wfd-invisible="true"></label>
-                      <input autocomplete="language" type="text" placeholder="¿Cual es tu nivel de Ingles?" rows="4" cols="50" id="message-5a100" name="entry.299580500" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-white" required="">
+                      <input autocomplete="language" type="text" placeholder="¿Cual es tu nivel de Ingles?" rows="4" cols="50" id="message-5a100" name="entry.299580500" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-white" required="" >
                     </div>
-                    <div class="u-align-center u-form-group u-form-submit u-form-group-4 ">
-                      <button type="submit" class="u-border-2 u-border-black u-btn u-btn-submit u-button-style u-hover-black u-none u-text-black u-text-hover-white u-btn-10" id="btn-send">Registrarme</button>
+                    <div class="u-align-center u-form-group u-form-submit u-form-group-4">
+                      <button type="submit" class="u-border-2 u-border-black u-btn u-btn-submit u-button-style u-hover-black u-none u-text-black u-text-hover-white u-btn-10" id="btn-send" onclick="messageConfirmation()" >Registrarme</button>
                     </div>
                 </form>
                 </div>
