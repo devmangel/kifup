@@ -1,7 +1,7 @@
 //===
 // VARIABLES
 //===
-const DATE_TARGET = new Date('19/12/2021 06:00 PM');
+const DATE_TARGET = new Date('11/19/2021 06:00 PM');
 // DOM for render
 const SPAN_DAYS = document.querySelector('span#days');
 const SPAN_HOURS = document.querySelector('span#hours');
@@ -11,7 +11,7 @@ const SPAN_SECONDS = document.querySelector('span#seconds');
 const MILLISECONDS_OF_A_SECOND = 1000;
 const MILLISECONDS_OF_A_MINUTE = MILLISECONDS_OF_A_SECOND * 60;
 const MILLISECONDS_OF_A_HOUR = MILLISECONDS_OF_A_MINUTE * 60;
-const MILLISECONDS_OF_A_DAY = MILLISECONDS_OF_A_HOUR * 24
+const MILLISECONDS_OF_A_DAY = MILLISECONDS_OF_A_HOUR * 24;
 
 //===
 // FUNCTIONS
