@@ -121,10 +121,10 @@ Rojo Logo #e85f63
 
 .item__list{
 
-  margin-bottom: 30px;
-  box-shadow: 1px 1px 5px black;
+  margin-bottom: 50px;
+  box-shadow: 1px 1px 15px 0px black;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .u-sidenav-overflow{

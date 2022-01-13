@@ -57,8 +57,8 @@ function messageConfirmation(){
             document.getElementById("message-5a105").innerHTML = " ";
             document.getElementById("message-5a100").innerHTML = " ";
 
-            document.getElementById("btn-send").innerHTML = "¡Registro Exitoso!";
-            document.getElementById("btn-send").style.color = "red";
+            document.getElementById("btn-send").innerHTML = "¡Registro Enviado!";
+            alert("¡Registro exitoso!")
             
         }
 
