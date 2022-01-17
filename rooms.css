@@ -1,0 +1,292 @@
+.room-container{
+
+    width: 100%;
+    min-height: 600px;
+    height: auto;
+    padding: 20px;
+}
+
+.room__header{
+    height: auto;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.btn-room__header{
+    height: 40px;
+    margin: 5px 6px;
+    width: 46%;
+    border-radius: 5px;
+    background-color: transparent;
+    border: solid 2px black;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    color: black;
+    line-height: 35px;
+}
+
+.btn-wap{
+
+    width: 100%;
+}
+
+.btn-buy{
+    background-color: #FFDD00;
+}
+
+.btn-room__header:hover{
+    background-color: black;
+    color: white;
+}
+
+.room__body{
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
+
+.room{
+    /* border: solid black 1px; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 60%;
+    height: 180px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    background: white;
+}
+
+.room__container{
+
+    display: flex;
+    align-items: center;
+    height: 60%;
+    padding: 0px 8px;
+}
+
+
+.room-icon{
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+}
+
+
+
+.room-text__container{
+
+    width: 80%;
+    height: 100%;
+    padding: 2px 8px;
+}
+
+
+.room-level{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 30px;
+    color: #89d0ca;
+}
+
+.room-description{
+    margin-top: 15px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.btn__join-room{
+    width: 70%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #89d0ca;
+    margin: 0 auto;
+    background: transparent;
+    cursor: pointer;
+    color: #89d0ca;
+}
+
+.btn__join-room:hover{
+    background: #89d0ca;
+    color: white;
+}
+
+/* ------------------------- */
+/* POPUP */
+/* ------------------------- */
+
+.overlay {
+	background: rgba(0,0,0,.3);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	visibility: hidden;
+}
+
+.overlay.active {
+	visibility: visible;
+}
+
+.popup {
+	background: #F8F8F8;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	border-radius: 3px;
+	padding: 20px;
+	text-align: center;
+	width: 80%;
+	height: 300px;
+	transition: .3s ease all;
+	transform: scale(0.7);
+	opacity: 0;
+}
+
+.popup .btn-cerrar-popup {
+	font-size: 16px;
+	line-height: 16px;
+	display: block;
+	text-align: right;
+	transition: .3s ease all;
+	color: #BBBBBB;
+}
+
+.popup .btn-cerrar-popup:hover {
+	color: #000;
+}
+
+.popup h3 {
+	font-size: 36px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	opacity: 0;
+}
+
+.popup h4 {
+	font-size: 26px;
+	font-weight: 300;
+	margin-bottom: 40px;
+	opacity: 0;
+}
+
+.popup form .contenedor-inputs {
+	opacity: 0;
+}
+
+.popup form .contenedor-inputs input {
+	width: 80%;
+	margin-bottom: 20px;
+	height: 40px;
+	font-size: 16px;
+	line-height: 52px;
+	text-align: center;
+	border: 1px solid #BBBBBB;
+}
+
+.popup form .btn-submit {
+	padding: 0 20px;
+	height: 40px;
+    width: 50%;
+	line-height: 40px;
+	border: none;
+	color: white;
+	background: #89d0ca;
+	border-radius: 3px;
+	font-size: 14px;
+	cursor: pointer;
+	transition: .3s ease all;
+    position: relative;
+    top: 15px;
+}
+
+.popup form .btn-submit:hover {
+	background: rgba(94,125,227, .9);
+}
+
+.level-list{
+    margin-bottom: 10px;
+    text-align: center;
+    height: 40px;
+    width: 80%;
+    outline: none;
+    border: none;
+}
+
+.disclaimer{
+    font-size: 13px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+
+/* ------------------------- */
+/* ANIMACIONES */
+/* ------------------------- */
+.popup.active {	transform: scale(1); opacity: 1; }
+.popup.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
+.popup.active h4 { animation: entradaSubtitulo .8s ease .5s forwards; }
+.popup.active .contenedor-inputs { animation: entradaInputs 1s linear 1s forwards; }
+
+@keyframes entradaTitulo {
+	from {
+		opacity: 0;
+		transform: translateY(-25px);
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes entradaSubtitulo {
+	from {
+		opacity: 0;
+		transform: translateY(25px);
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes entradaInputs {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 700px){
+
+    .btn-room__header{
+        width: 30%;
+    }
+
+    .room__header{
+        padding: 0 15%;
+    }
+}

@@ -1,7 +1,153 @@
+// Class to create rooms and set up all functions itself
+
+class MotherRoom{
+
+    constructor({id,size,description,name,status,level}){
+        this.id = id;
+        this.size = size;
+        this.description = description;
+        this.name = name;
+        this.status = status;
+        this.level = level;
+        this.videoId = 0;
+    }
+
+    // Method that Create HTML Elements 
+
+    static createDOM(anyId,descrip,level){
+
+        
+        const newRoom = document.createElement("div");
+        document.getElementById('roomQueue').appendChild(newRoom);
+        newRoom.classList.add('room');
+        newRoom.setAttribute('id', anyId);
+        newRoom.innerHTML = `<div class='room__container'><img src='./images/flag-english.png' alt='english room' class='room-icon'><div class='room-text__container'><h6 class='room-level'>${level}</h6><h6 class='room-description'>${descrip}</h6></div></div><button class='btn__join-room' onclick='openRoom()'>Join</button></div>`;
+    }
+
+}
+
+// Array with the active rooms
+
+const roomList = [];
+
+// Button who create description and level of the room
+
+function createRoom(){
+
+                
+        const newRoom = new MotherRoom({status: true});
+        roomList.push(newRoom);
+        
+        for (item of roomList){
+
+            if (item.status && roomList.length < 10){
+
+                
+                const descriptionRoom = document.getElementById('roomDescription').value;
+                item.description = descriptionRoom;
+                var level = document.getElementById("levelList");
+                var levelSelected = level.options[level.selectedIndex].text;
+                item.level = levelSelected;
+                console.log(item)
+
+                // Create html elements from this method
+            
+                const idCreated = newId()
+                MotherRoom.createDOM(idCreated,item.description,item.level);
+
+            } else {
+                
+                overlay.classList.remove('active');
+	            popup.classList.remove('active');
+            }
+
+            overlay.classList.remove('active');
+	        popup.classList.remove('active');
+
+            
+
+            // Set status false to avoid loop (for of) change it again
+
+            item.status = false;
+        }
+
+    
+}
+
+// Counter of Id HTML divs
+
+function idCount(){
+
+    let idCounter = 0;
+
+    function counter(){
+
+        idCounter++
+
+        return idCounter;
+    }
+
+    return counter;
+}
+
+const newId = idCount();
+
+
+// Function that call API
+
+async function openRoom(){
+
+    await fetch('https://us-central1-beeooro-43fb4.cloudfunctions.net/createRoomExternalOp', {
+    method: 'POST',
+    body: JSON.stringify(dataApi),
+    })
+        .then(response => response.json())
+        .then(data => {
+
+            const idRoom = data.content;
+
+            console.log(idRoom)
+            
+            })
+        .catch((error) => {
+
+            console.log(`We have an error: ${error}`)
+
+            });
+}
+
+const dataApi = {
+        userName: "jKvU82PZIpKXiQwHnzwN",
+        apiKey: "gns6glj2lchf1k5sdfba5bkgrhgs",
+        roomName: "Kifup Room",
+        roomType: "public",
+        adminAccessKey:"jKvU82PZIpKXiQwHnzwN"
+};
+
+
+
+// Popup script 
+
+var btnAbrirPopup = document.getElementById('btn-abrir-popup'),
+	overlay = document.getElementById('overlay'),
+	popup = document.getElementById('popup'),
+	btnCerrarPopup = document.getElementById('btn-cerrar-popup');
+
+btnAbrirPopup.addEventListener('click', function(){
+	overlay.classList.add('active');
+	popup.classList.add('active');
+});
+
+btnCerrarPopup.addEventListener('click', function(e){
+	e.preventDefault();
+	overlay.classList.remove('active');
+	popup.classList.remove('active');
+});
+
 //===
-// VARIABLES
+// Variables for counter date video session
 //===
-const DATE_TARGET = new Date('01/14/2022 06:00 PM');
+const DATE_TARGET = new Date('01/21/2022 06:00 PM');
 // DOM for render
 const SPAN_DAYS = document.querySelector('span#days');
 const SPAN_HOURS = document.querySelector('span#hours');
@@ -69,4 +215,6 @@ function limpiar(){
     setTimeout('document.formreg.reset()',100);
 
     return false;
-}
+};
+
+
