@@ -21,7 +21,7 @@ class MotherRoom{
         document.getElementById('roomQueue').appendChild(newRoom);
         newRoom.classList.add('room');
         newRoom.setAttribute('id', anyId);
-        newRoom.innerHTML = `<div class='room__container'><img src='./images/flag-english.png' alt='english room' class='room-icon'><div class='room-text__container'><h6 class='room-level'>${level}</h6><h6 class='room-description'>${descrip}</h6></div></div><button class='btn__join-room' onclick='openRoom()'>Join</button></div>`;
+        newRoom.innerHTML = `<div class='room__container'><img src='./images/flag-english.png' alt='english room' class='room-icon'><div class='room-text__container'><h6 class='room-level'>${level}</h6><h6 class='room-description'>${descrip}</h6></div></div><button class='btn__join-room' onclick='openRoom2()'>Join</button></div>`;
     }
 
 }
@@ -63,7 +63,8 @@ function createRoom(){
 
             overlay.classList.remove('active');
 	        popup.classList.remove('active');
-
+            const gif = document.getElementById('gif');
+            gif.style.display = 'none';
             
 
             // Set status false to avoid loop (for of) change it again
@@ -95,9 +96,9 @@ const newId = idCount();
 
 // Function that call API
 
-async function openRoom(){
+function openRoom(){
 
-    await fetch('https://us-central1-beeooro-43fb4.cloudfunctions.net/createRoomExternalOp', {
+    fetch('https://us-central1-beeooro-43fb4.cloudfunctions.net/createRoomExternalOp', {
     method: 'POST',
     body: JSON.stringify(dataApi),
     })
@@ -124,7 +125,12 @@ const dataApi = {
         adminAccessKey:"jKvU82PZIpKXiQwHnzwN"
 };
 
+// Temporary function
 
+function openRoom2(){
+
+    window.open("/kifuprooms.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=600,height=600");
+}
 
 // Popup script 
 
@@ -174,7 +180,6 @@ function updateCountdown() {
     const REMAINING_HOURS = Math.floor((DURATION % MILLISECONDS_OF_A_DAY) / MILLISECONDS_OF_A_HOUR);
     const REMAINING_MINUTES = Math.floor((DURATION % MILLISECONDS_OF_A_HOUR) / MILLISECONDS_OF_A_MINUTE);
     const REMAINING_SECONDS = Math.floor((DURATION % MILLISECONDS_OF_A_MINUTE) / MILLISECONDS_OF_A_SECOND);
-    // Thanks Pablo Monteserín (https://pablomonteserin.com/cuenta-regresiva/)
 
     // Render
     SPAN_DAYS.textContent = REMAINING_DAYS;

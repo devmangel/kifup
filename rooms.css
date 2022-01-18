@@ -121,6 +121,14 @@
     color: white;
 }
 
+
+.gif-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 100px;
+}
+
 /* ------------------------- */
 /* POPUP */
 /* ------------------------- */
@@ -272,14 +280,6 @@
 
 
 
-
-
-
-
-
-
-
-
 @media screen and (min-width: 700px){
 
     .btn-room__header{
@@ -288,5 +288,43 @@
 
     .room__header{
         padding: 0 15%;
+    }
+
+    .room{
+        width: 40%;
+    }
+
+    .btn__join-room{
+
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1000px){
+
+    .room{
+        width: 30%;
+    }
+
+    .room-level{
+
+        font-size: 22px;
+    }
+
+    .room-description{
+
+        font-size: 18px;
+    }
+
+    .room-icon{
+
+        width: 100px;
+        height: 100px;
+        margin-left: 30px;
+    }
+
+    .popup {
+
+        width: 40%;
     }
 }

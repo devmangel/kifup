@@ -16912,6 +16912,11 @@ div.u-video,
   content: "\2715";
   font-size: 28px !important;
 }
+
+.u-enable-responsive .u-menu-close:hover{
+ 
+}
+
 .u-enable-responsive.u-offcanvas .u-sidenav {
   height: 100vh;
   height: -webkit-fill-available;

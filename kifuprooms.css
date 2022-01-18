@@ -1,0 +1,18 @@
+.tittle{
+    text-align: center;
+    color: #89d0ca;
+    font-weight: bold !important;
+}
+
+.sub-tittle{
+
+    text-align: center;
+}
+
+.img__header{
+    width: 50px;
+    position: relative;
+    right: -30px;
+    top: 10px;
+  }
+  
