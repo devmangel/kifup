@@ -63,8 +63,6 @@ function createRoom(){
 
             overlay.classList.remove('active');
 	        popup.classList.remove('active');
-            const gif = document.getElementById('gif');
-            gif.style.display = 'none';
             
 
             // Set status false to avoid loop (for of) change it again
@@ -125,18 +123,12 @@ const dataApi = {
         adminAccessKey:"jKvU82PZIpKXiQwHnzwN"
 };
 
-// Temporary function
 
-function openRoom2(){
-
-    window.open("/kifuprooms.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=600,height=600");
-}
-
-// Popup script 
+// Popup script to create a room
 
 var btnAbrirPopup = document.getElementById('btn-abrir-popup'),
-	overlay = document.getElementById('overlay'),
-	popup = document.getElementById('popup'),
+	overlay = document.getElementById('overlayLvl'),
+	popup = document.getElementById('popupLvl'),
 	btnCerrarPopup = document.getElementById('btn-cerrar-popup');
 
 btnAbrirPopup.addEventListener('click', function(){
@@ -149,6 +141,65 @@ btnCerrarPopup.addEventListener('click', function(e){
 	overlay.classList.remove('active');
 	popup.classList.remove('active');
 });
+
+// Popup script to open a videochat static
+// Basic room
+
+var btnOpenPopup = document.getElementById('btn-open-popup'),
+	overlayBasic = document.getElementById('basicRoomOverlay'),
+	popupBasic = document.getElementById('basicPopupRoom'),
+	btnClosePopup = document.getElementById('btn-close-popup');
+
+btnOpenPopup.addEventListener('click', function(){
+	overlayBasic.classList.add('active');
+	popupBasic.classList.add('active');
+});
+
+btnClosePopup.addEventListener('click', function(e){
+	e.preventDefault();
+	overlayBasic.classList.remove('active');
+	popupBasic.classList.remove('active');
+});
+
+// Intermediate room
+
+var btnOpenPopup2 = document.getElementById('btn-open-popup2'),
+	overlayIntermediate = document.getElementById('intermediateRoomOverlay'),
+	popupIntermediate = document.getElementById('intermediatePopupRoom'),
+	btnClosePopup2 = document.getElementById('btn-close-popup2');
+
+    btnOpenPopup2.addEventListener('click', function(){
+    overlayIntermediate.classList.add('active');
+	popupIntermediate.classList.add('active');
+});
+
+btnClosePopup2.addEventListener('click', function(e){
+	e.preventDefault();
+	overlayIntermediate.classList.remove('active');
+	popupIntermediate.classList.remove('active');
+});
+
+
+// Advanced room
+
+var btnOpenPopup = document.getElementById('btn-open-popup'),
+	overlayBasic = document.getElementById('basicRoomOverlay'),
+	popupBasic = document.getElementById('basicPopupRoom'),
+	btnClosePopup = document.getElementById('btn-close-popup');
+
+btnOpenPopup.addEventListener('click', function(){
+	overlayBasic.classList.add('active');
+	popupBasic.classList.add('active');
+});
+
+btnClosePopup.addEventListener('click', function(e){
+	e.preventDefault();
+	overlayBasic.classList.remove('active');
+	popupBasic.classList.remove('active');
+});
+
+
+
 
 //===
 // Variables for counter date video session
