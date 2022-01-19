@@ -127,8 +127,8 @@ const dataApi = {
 // Popup script to create a room
 
 var btnAbrirPopup = document.getElementById('btn-abrir-popup'),
-	overlay = document.getElementById('overlayLvl'),
-	popup = document.getElementById('popupLvl'),
+	overlay = document.getElementById('overlay'),
+	popup = document.getElementById('popup'),
 	btnCerrarPopup = document.getElementById('btn-cerrar-popup');
 
 btnAbrirPopup.addEventListener('click', function(){
