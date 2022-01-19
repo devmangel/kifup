@@ -2,11 +2,13 @@
     text-align: center;
     color: #89d0ca;
     font-weight: bold !important;
+    font-size: 16px !important;
 }
 
 .sub-tittle{
 
     text-align: center;
+    font-size: 14px !important;
 }
 
 .img__header{
@@ -16,3 +18,8 @@
     top: 10px;
   }
   
+  .roomPopup{
+
+    height: 93%;
+    width: 90%;
+  }

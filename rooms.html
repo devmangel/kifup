@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="nicepage.css" media="screen">
     <link rel="stylesheet" href="Home.css" media="screen">
     <link rel="stylesheet" href="./rooms.css" media="screen">
+    <link rel="stylesheet" href="kifuprooms.css">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.24.3, nicepage.com">
@@ -93,6 +94,43 @@
                 <a class="btn-room__header btn-wap" href="https://chat.whatsapp.com/JUZL8LsLcqfKcYzGO7lR85" target="_blank" >WhatsApp group</a>
               </header>
                 <div class="room__body" id="roomQueue">
+
+
+                  <!-- Basic room HTML-->
+                  <div class="room">
+                    <div class='room__container'>
+                      <img src='./images/flag-english.png' alt='english room' class='room-icon'>
+                      <div class='room-text__container'>
+                        <h6 class='room-level'>Basic Level</h6>
+                        <h6 class='room-description'>Esta sala es para nivel básico. Es permitido hablar inglés y español</h6>
+                      </div>
+                    </div>
+                    <button class='btn__join-room' id="btn-open-popup1">Join</button>
+                  </div>
+                  <!-- Intermediate room HTML -->
+
+                  <div class="room">
+                    <div class='room__container'>
+                      <img src='./images/flag-english.png' alt='english room' class='room-icon'>
+                      <div class='room-text__container'>
+                        <h6 class='room-level'>Intermediate Level</h6>
+                        <h6 class='room-description'>You can either talk or listen while you improve your English skills</h6>
+                      </div>
+                    </div>
+                    <button class='btn__join-room' id="btn-open-popup2">Join</button>
+                  </div>
+
+                  <!-- Advanced room HTML -->
+                  <div class="room">
+                    <div class='room__container'>
+                      <img src='./images/flag-english.png' alt='english room' class='room-icon'>
+                      <div class='room-text__container'>
+                        <h6 class='room-level'>Advanced Level</h6>
+                        <h6 class='room-description'>Meet people from all over the world while you have fun</h6>
+                      </div>
+                    </div>
+                    <button class='btn__join-room' id="btn-open-popup3">Join</button>
+                  </div>
                   <!-- New rooms created over here -->
                 </div>
             </section>
@@ -100,7 +138,7 @@
         </div>
       </div>
     </section>
-
+<!-- Popup to create a room -->
     <div class="overlay" id="overlay">
       <div class="popup" id="popup">
         <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
@@ -122,6 +160,39 @@
         </form>
       </div>
     </div>
+
+  <!-- Basic room popup window with iframe videochat-->
+    <div class="overlay roomOverlay" id="basicRoomOverlay">
+      <div class="popup roomPopup" id="basicPopupRoom">
+        <a href="#" id="btn-close-popup1" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+          <h1 class="tittle">Welcome to Kifup Rooms</h1>
+          <h2 class="sub-tittle">Be nice and polite. Thanks!</h2>
+          <iframe class="frame" allow="camera; microphone; fullscreen; display-capture; autoplay" src="https://beeooro.com/embedded/i1VJnkrqjeGLAk87bgZl?guestkey=xo7jw" style="height: 80%; width: 95%; border: 0px;"></iframe>
+      </div>
+    </div>
+  
+  <!-- Intermediate room popup window with iframe videochat-->
+    <div class="overlay roomOverlay" id="intermediateRoomOverlay">
+      <div class="popup roomPopup" id="intermediatePopupRoom">
+        <a href="#" id="btn-close-popup2" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+          <h1 class="tittle">Welcome to Kifup Rooms</h1>
+          <h2 class="sub-tittle">Be nice and polite. Thanks!</h2>
+          <iframe allow="camera; microphone; fullscreen; display-capture; autoplay" src="https://beeooro.com/embedded/jVEVVdgCMakCRIeUNXSQ?guestkey=rfvur" style="height: 80%; width: 95%; border: 0px;"></iframe>
+      </div>
+    </div>
+  
+  <!-- Advanced room popup window with iframe videochat-->
+  
+    <div class="overlay roomOverlay" id="advancedRoomOverlay">
+      <div class="popup roomPopup" id="advancedPopupRoom">
+        <a href="#" id="btn-close-popup3" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+          <h1 class="tittle">Welcome to Kifup Rooms</h1>
+          <h2 class="sub-tittle">Be nice and polite. Thanks!</h2>
+          <iframe allow="camera; microphone; fullscreen; display-capture; autoplay" src="https://beeooro.com/embedded/DAn5VTBtpjsXzM4SRXgX?guestkey=sz52l" style="height: 80%; width: 95%; border: 0px;"></iframe>
+      </div>
+    </div>
+
+
 
   </div>
   </body>

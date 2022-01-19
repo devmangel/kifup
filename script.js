@@ -145,17 +145,17 @@ btnCerrarPopup.addEventListener('click', function(e){
 // Popup script to open a videochat static
 // Basic room
 
-var btnOpenPopup = document.getElementById('btn-open-popup'),
+var btnOpenBasic = document.getElementById('btn-open-popup1'),
 	overlayBasic = document.getElementById('basicRoomOverlay'),
 	popupBasic = document.getElementById('basicPopupRoom'),
-	btnClosePopup = document.getElementById('btn-close-popup');
+	btnCloseIntermediate = document.getElementById('btn-close-popup1');
 
-btnOpenPopup.addEventListener('click', function(){
+btnOpenBasic.addEventListener('click', function(){
 	overlayBasic.classList.add('active');
 	popupBasic.classList.add('active');
 });
 
-btnClosePopup.addEventListener('click', function(e){
+btnCloseIntermediate.addEventListener('click', function(e){
 	e.preventDefault();
 	overlayBasic.classList.remove('active');
 	popupBasic.classList.remove('active');
@@ -163,17 +163,17 @@ btnClosePopup.addEventListener('click', function(e){
 
 // Intermediate room
 
-var btnOpenPopup2 = document.getElementById('btn-open-popup2'),
-	overlayIntermediate = document.getElementById('intermediateRoomOverlay'),
+var btnOpenIntermediate = document.getElementById('btn-open-popup2'),
+	overlayIntermediate = document.getElementById('intermediateRoomOverlay');
 	popupIntermediate = document.getElementById('intermediatePopupRoom'),
-	btnClosePopup2 = document.getElementById('btn-close-popup2');
+	btnCloseIntermediate = document.getElementById('btn-close-popup2');
 
-    btnOpenPopup2.addEventListener('click', function(){
+btnOpenIntermediate.addEventListener('click', function(){
     overlayIntermediate.classList.add('active');
 	popupIntermediate.classList.add('active');
 });
 
-btnClosePopup2.addEventListener('click', function(e){
+btnCloseIntermediate.addEventListener('click', function(e){
 	e.preventDefault();
 	overlayIntermediate.classList.remove('active');
 	popupIntermediate.classList.remove('active');
@@ -182,20 +182,20 @@ btnClosePopup2.addEventListener('click', function(e){
 
 // Advanced room
 
-var btnOpenPopup = document.getElementById('btn-open-popup'),
-	overlayBasic = document.getElementById('basicRoomOverlay'),
-	popupBasic = document.getElementById('basicPopupRoom'),
-	btnClosePopup = document.getElementById('btn-close-popup');
+var btnOpenAdvanced = document.getElementById('btn-open-popup3'),
+	overlayAdvanced = document.getElementById('advancedRoomOverlay'),
+	popupAdvanced = document.getElementById('advancedPopupRoom'),
+	btnCloseAdvanced = document.getElementById('btn-close-popup3');
 
-btnOpenPopup.addEventListener('click', function(){
-	overlayBasic.classList.add('active');
-	popupBasic.classList.add('active');
+btnOpenAdvanced.addEventListener('click', function(){
+	overlayAdvanced.classList.add('active');
+	popupAdvanced.classList.add('active');
 });
 
-btnClosePopup.addEventListener('click', function(e){
+btnCloseAdvanced.addEventListener('click', function(e){
 	e.preventDefault();
-	overlayBasic.classList.remove('active');
-	popupBasic.classList.remove('active');
+	overlayAdvanced.classList.remove('active');
+	popupAdvanced.classList.remove('active');
 });
 
 
