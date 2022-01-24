@@ -26,11 +26,11 @@ class MotherRoom{
 
 }
 
-// Array with the active rooms
+// Array with the active rooms global scope
 
 const roomList = [];
 
-// Button who create description and level of the room
+// Button that create description and level of the room
 
 function createRoom(){
 
@@ -48,7 +48,6 @@ function createRoom(){
                 var level = document.getElementById("levelList");
                 var levelSelected = level.options[level.selectedIndex].text;
                 item.level = levelSelected;
-                console.log(item)
 
                 // Create html elements from this method
             
@@ -113,6 +112,14 @@ function openRoom(){
             console.log(`We have an error: ${error}`)
 
             });
+}
+
+// Create complementary room
+
+function openRoom2(){
+
+    
+
 }
 
 const dataApi = {
