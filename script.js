@@ -67,6 +67,7 @@ function createRoom(){
             // Set status false to avoid loop (for of) change it again
 
             item.status = false;
+
         }
 
     
@@ -160,6 +161,12 @@ var btnOpenBasic = document.getElementById('btn-open-popup1'),
 btnOpenBasic.addEventListener('click', function(){
 	overlayBasic.classList.add('active');
 	popupBasic.classList.add('active');
+
+    const iframe = document.getElementById('basic');
+    if(!iframe.src){
+        iframe.src = "https://beeooro.com/embedded/i1VJnkrqjeGLAk87bgZl?guestkey=xo7jw";
+    }
+    
 });
 
 btnCloseIntermediate.addEventListener('click', function(e){
@@ -178,6 +185,11 @@ var btnOpenIntermediate = document.getElementById('btn-open-popup2'),
 btnOpenIntermediate.addEventListener('click', function(){
     overlayIntermediate.classList.add('active');
 	popupIntermediate.classList.add('active');
+
+    const iframe = document.getElementById('intermediate');
+    if(!iframe.src){
+        iframe.src = "https://beeooro.com/embedded/jVEVVdgCMakCRIeUNXSQ?guestkey=rfvur";
+    }
 });
 
 btnCloseIntermediate.addEventListener('click', function(e){
@@ -197,6 +209,12 @@ var btnOpenAdvanced = document.getElementById('btn-open-popup3'),
 btnOpenAdvanced.addEventListener('click', function(){
 	overlayAdvanced.classList.add('active');
 	popupAdvanced.classList.add('active');
+
+    const iframe = document.getElementById('advanced');
+    if(!iframe.src){
+        iframe.src = "https://beeooro.com/embedded/DAn5VTBtpjsXzM4SRXgX?guestkey=sz52l";
+    }
+    
 });
 
 btnCloseAdvanced.addEventListener('click', function(e){
