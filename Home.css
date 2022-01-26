@@ -83,6 +83,26 @@ Rojo Logo #e85f63
 }
 
 
+.tittle{
+  text-align: center;
+  color: #89d0ca;
+  font-weight: bold !important;
+  font-size: 16px !important;
+}
+
+.sub-tittle{
+
+  text-align: center;
+  font-size: 14px !important;
+}
+
+.roomOverlay .roomPopup{
+
+  height: 95%;
+  width: 90%;
+}
+
+
 .u-section-1 .u-image-1 {
   background-image: url("images/-min.jpg");
   background-position: 0% 50%;
@@ -329,6 +349,8 @@ Rojo Logo #e85f63
     position: absolute;
     top: 25px;
   }
+
+
 
   .u-container-layout .fix-tittle{
 
