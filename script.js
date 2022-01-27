@@ -207,7 +207,7 @@ btnOpenAdvanced.addEventListener('click', function(){
 	popupAdvanced.classList.add('active');
 
     const iframe = document.getElementById('advancedLink')
-    iframe.src = "https://beeooro.com/embedded/DAn5VTBtpjsXzM4SRXgX?guestkey=sz52l";
+    iframe.src = "https://tokbox.com/developer/embeds/?room=pep6hf";
     
 });
 
@@ -215,7 +215,71 @@ btnCloseAdvanced.addEventListener('click', function(e){
 	e.preventDefault();
 	overlayAdvanced.classList.remove('active');
 	popupAdvanced.classList.remove('active');
+    
 });
+
+
+// Starting video chat 
+
+var script = document.createElement("script");
+script.type = "text/javascript";
+
+btnOpenAdvanced = document.getElementById('btn-open-popup3'),
+
+// When I need this happens
+
+
+btnOpenAdvanced.addEventListener("click", function (event) {
+
+  const config = {
+    name: "AdvancedLevel",
+    meetingId: "kifup_advanced",
+    apiKey: "75fcaa7a-c874-4122-9fb4-4541ef22216f",
+
+    containerId: null,
+
+    micEnabled: true,
+    webcamEnabled: true,
+    participantCanToggleSelfWebcam: true,
+    participantCanToggleSelfMic: true,
+
+    chatEnabled: true,
+    screenShareEnabled: true,
+
+    pollEnabled: true,
+    whiteBoardEnabled: true,
+    raiseHandEnabled: true,
+
+    brandingEnabled: true,
+    brandLogoURL: "https://kifup.club/images/logo.png",
+    brandName: "Kifup",
+    poweredBy: false,
+
+    participantCanLeave: false,
+  };
+
+  const meeting = new VideoSDKMeeting();
+  roomList.push(meeting);
+  meeting.init(config);
+
+});
+
+script.src = "/videosdk.js";
+document.getElementsByTagName("head")[0].appendChild(script);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
