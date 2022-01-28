@@ -101,11 +101,11 @@
                     <div class='room__container'>
                       <img src='./images/basic.jpg' alt='english room' class='room-icon'>
                       <div class='room-text__container'>
-                        <h6 class='room-level'>Basic Level</h6>
-                        <h6 class='room-description'>Esta sala es para nivel básico. Es permitido hablar inglés y español</h6>
+                        <h6 class='room-level'>Basic English Level</h6>
+                        <h6 class='room-description'>Best room to start learning and practicing the basics here! </h6>
                       </div>
                     </div>
-                    <button class='btn__join-room' id="btn-open-popup1">Join</button>
+                    <button class='btn__join-room' onclick="basicStart.next()">Join</button>
                   </div>
                   <!-- Intermediate room HTML -->
 
@@ -113,24 +113,61 @@
                     <div class='room__container'>
                       <img src='./images/flag-english.png' alt='english room' class='room-icon'>
                       <div class='room-text__container'>
-                        <h6 class='room-level'>Intermediate Level</h6>
-                        <h6 class='room-description'>You can either talk or listen while you improve your English skills</h6>
+                        <h6 class='room-level'>English Intermediate</h6>
+                        <h6 class='room-description'>This room works if you are intermediate level, find a pertner and keep it up</h6>
                       </div>
                     </div>
-                    <button class='btn__join-room' id="btn-open-popup2">Join</button>
+                    <button class='btn__join-room' onclick="interStart.next()">Join</button>
                   </div>
 
                   <!-- Advanced room HTML -->
                   <div class="room">
                     <div class='room__container'>
-                      <img src='./images/advanced.PNG' alt='english room' class='room-icon'>
+                      <img src='./images/english.jpg' alt='english room' class='room-icon'>
                       <div class='room-text__container'>
-                        <h6 class='room-level'>Advanced Level</h6>
-                        <h6 class='room-description'>Meet people from all over the world while you have fun</h6>
+                        <h6 class='room-level'>English Advanced</h6>
+                        <h6 class='room-description'>Almost a native speaker? try to improve your english skills here</h6>
                       </div>
                     </div>
-                    <button class='btn__join-room' id="btn-open-popup3">Join</button>
+                    <button class='btn__join-room' onclick="advancedStart.next()">Join</button>
                   </div>
+
+                   <!-- Spanish room HTML -->
+                  <div class="room">
+                    <div class='room__container'>
+                      <img src='./images/spanish.jpg' alt='sala en español' class='room-icon'>
+                      <div class='room-text__container'>
+                        <h6 class='room-level'>Sala en Español</h6>
+                        <h6 class='room-description'>Latinos y más latinos! Conoce nueva gente increíble aquí</h6>
+                      </div>
+                    </div>
+                    <button class='btn__join-room' onclick="spanishStart.next()">Entrar</button>
+                  </div>
+                   <!-- French room HTML -->
+                  <div class="room">
+                    <div class='room__container'>
+                      <img src='./images/french.jpg' alt='french room' class='room-icon'>
+                      <div class='room-text__container'>
+                        <h6 class='room-level'>Salon Française</h6>
+                        <h6 class='room-description'>Améliorez vos compétences dans la langue la plus romantique du monde</h6>
+                      </div>
+                    </div>
+                    <button class='btn__join-room' onclick="frenchStart.next()">Montez</button>
+                  </div>
+
+                   <!-- Arabic room HTML -->
+                  <div class="room">
+                    <div class='room__container'>
+                      <img src='./images/arabic.jpg' alt='arabic room' class='room-icon'>
+                      <div class='room-text__container'>
+                        <h6 class='room-level'>تعلم اللغة العربية</h6>
+                        <h6 class='room-description'>تعرف على الثقافة المذهلة للشرق الأوسط في هذه الغرفة!</h6>
+                      </div>
+                    </div>
+                    <button class='btn__join-room' onclick="arabicStart.next()">Join</button>
+                  </div>
+
+
                   <!-- New rooms created over here -->
                 </div>
             </section>
@@ -148,6 +185,7 @@
             <input type="email" placeholder="What you want to talk about" id="roomDescription">
             <select class="level-list" id="levelList">
               <option id="noLevel" class="level-list__item">Select level</option> 
+              <option id="beginner" class="level-list__item">Any Level</option> 
               <option id="beginner" class="level-list__item">Beginner</option> 
               <option id="upperBeginner" class="level-list__item">Upper Beginner</option> 
               <option id="intermediate" class="level-list__item">Intermediate</option>
@@ -165,9 +203,13 @@
     <div class="overlay roomOverlay" id="basicRoomOverlay">
       <div class="popup roomPopup" id="basicPopupRoom">
         <a href="#" id="btn-close-popup1" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-          <h1 class="tittle">Welcome to Kifup Rooms</h1>
-          <h2 class="sub-tittle">Be nice and polite. Thanks!</h2>
-          <iframe id='basicLink'class="frame" allow="camera; microphone; fullscreen; display-capture; autoplay;" style="height: 80%; width: 95%; border: 0px;"></iframe>
+          <h6 class="tittle-welcome">Welcome to Kifup Rooms</h6>
+          <h6 class="sub-tittle-welcome">Be nice and polite. Thanks!</62>
+          <div id="visibility">
+            <input type="name" id="name1" placeholder="What's your name" style="text-align: center; outline: none; margin-top: 20px; width: 300px; border-radius: 5px;">
+            <button onclick="basicStart.next()" style="width: 100px; margin-top: 20px; border-radius: 5px;" class="btn-start">Start</button>
+          </div>
+          <section id="roomContainer1"></section>
       </div>
     </div>
   
@@ -175,9 +217,13 @@
     <div class="overlay roomOverlay" id="intermediateRoomOverlay">
       <div class="popup roomPopup" id="intermediatePopupRoom">
         <a href="#" id="btn-close-popup2" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-          <h1 class="tittle">Welcome to Kifup Rooms</h1>
-          <h2 class="sub-tittle">Be nice and polite. Thanks!</h2>
-          <iframe id='intermediateLink' allow="camera; microphone; fullscreen; display-capture; autoplay;" style="height: 80%; width: 95%; border: 0px;"></iframe>
+        <h6 class="tittle-welcome">Welcome to Kifup Rooms</h6>
+        <h6 class="sub-tittle-welcome">Be nice and polite. Thanks!</62>
+          <div id="visibility2">
+            <input type="name" id="name2" placeholder="What's your name" style="text-align: center; outline: none; margin-top: 20px; width: 300px; border-radius: 5px;">
+            <button onclick="interStart.next()" style="width: 100px; margin-top: 20px; border-radius: 5px;" class="btn-start">Start</button>
+          </div>
+          <section id="roomContainer2"></section>
       </div>
     </div>
   
@@ -186,9 +232,59 @@
     <div class="overlay roomOverlay" id="advancedRoomOverlay">
       <div class="popup roomPopup" id="advancedPopupRoom">
         <a href="#" id="btn-close-popup3" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-          <h1 class="tittle">Welcome to Kifup Rooms</h1>
-          <h2 class="sub-tittle">Be nice and polite. Thanks!</h2>
-          <section id="roomContainer"></section>
+        <h6 class="tittle-welcome">Welcome to Kifup Rooms</h6>
+        <h6 class="sub-tittle-welcome">Be nice and polite. Thanks!</62>
+          <div id="visibility3">
+            <input type="name" id="name3" placeholder="What's your name" style="text-align: center; outline: none; margin-top: 20px; width: 300px; border-radius: 5px;">
+            <button onclick="advancedStart.next()" style="width: 100px; margin-top: 20px; border-radius: 5px;" class="btn-start">Start</button>
+          </div>
+          <section id="roomContainer3"></section>
+      </div>
+    </div>
+
+
+  <!-- Spanish room popup window with iframe videochat-->
+
+    <div class="overlay roomOverlay" id="spanishOverlay">
+      <div class="popup roomPopup" id="spanishPopupRoom">
+        <a href="#" id="btn-close-popup4" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+        <h6 class="tittle-welcome">Welcome to Kifup Rooms</h6>
+        <h6 class="sub-tittle-welcome">Be nice and polite. Thanks!</62>
+          <div id="visibility4">
+            <input type="name" id="name4" placeholder="What's your name" style="text-align: center; outline: none; margin-top: 20px; width: 300px; border-radius: 5px;">
+            <button onclick="spanishStart.next()" style="width: 100px; margin-top: 20px; border-radius: 5px;" class="btn-start">Start</button>
+          </div>
+          <section id="roomContainer4"></section>
+      </div>
+    </div>
+
+
+  <!-- French room popup window with iframe videochat-->
+    <div class="overlay roomOverlay" id="frenchOverlay">
+      <div class="popup roomPopup" id="frenchPopupRoom">
+        <a href="#" id="btn-close-popup5" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+        <h6 class="tittle-welcome">Welcome to Kifup Rooms</h6>
+        <h6 class="sub-tittle-welcome">Be nice and polite. Thanks!</62>
+          <div id="visibility5">
+            <input type="name" id="name5" placeholder="What's your name" style="text-align: center; outline: none; margin-top: 20px; width: 300px; border-radius: 5px;">
+            <button onclick="frenchStart.next()" style="width: 100px; margin-top: 20px; border-radius: 5px;" class="btn-start">Start</button>
+          </div>
+          <section id="roomContainer5"></section>
+      </div>
+    </div>
+
+
+  <!-- Arabic room popup window with iframe videochat-->
+    <div class="overlay roomOverlay" id="arabicOverlay">
+      <div class="popup roomPopup" id="arabicPopupRoom">
+        <a href="#" id="btn-close-popup6" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+        <h6 class="tittle-welcome">Welcome to Kifup Rooms</h6>
+        <h6 class="sub-tittle-welcome">Be nice and polite. Thanks!</62>
+          <div id="visibility6">
+            <input type="name" id="name6" placeholder="What's your name" style="text-align: center; outline: none; margin-top: 20px; width: 300px; border-radius: 5px;">
+            <button onclick="arabicStart.next()" style="width: 100px; margin-top: 20px; border-radius: 5px;" class="btn-start">Start</button>
+          </div>
+          <section id="roomContainer6"></section>
       </div>
     </div>
 

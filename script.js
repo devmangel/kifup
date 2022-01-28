@@ -1,4 +1,4 @@
-// Class to create rooms and set up all functions itself
+// Class to create front rooms (just HTML) and set up all functions itself
 
 class MotherRoom{
 
@@ -25,6 +25,18 @@ class MotherRoom{
     }
 
 }
+
+
+// Class to create new participants
+
+class Participants{
+
+    constructor({name,roomLevel}){
+        this.name = name;
+        this.roomLevel = roomLevel;
+    }
+}
+
 
 // Array with the active rooms global scope
 
@@ -92,45 +104,6 @@ function idCount(){
 const newId = idCount();
 
 
-// Function that call API
-
-function openRoom(){
-
-    fetch('https://us-central1-beeooro-43fb4.cloudfunctions.net/createRoomExternalOp', {
-    method: 'POST',
-    body: JSON.stringify(dataApi),
-    })
-        .then(response => response.json())
-        .then(data => {
-
-            const idRoom = data.content;
-
-            console.log(idRoom)
-            
-            })
-        .catch((error) => {
-
-            console.log(`We have an error: ${error}`)
-
-            });
-}
-
-// Create complementary room
-
-function openRoom2(){
-
-    
-
-}
-
-const dataApi = {
-        userName: "jKvU82PZIpKXiQwHnzwN",
-        apiKey: "gns6glj2lchf1k5sdfba5bkgrhgs",
-        roomName: "Kifup Room",
-        roomType: "public",
-        adminAccessKey:"jKvU82PZIpKXiQwHnzwN"
-};
-
 
 // Popup script to create a room
 
@@ -150,96 +123,174 @@ btnCerrarPopup.addEventListener('click', function(e){
 	popup.classList.remove('active');
 });
 
-// Popup script to open a videochat static
-// Basic room
 
-var btnOpenBasic = document.getElementById('btn-open-popup1'),
-	overlayBasic = document.getElementById('basicRoomOverlay'),
+
+
+
+// Popup script to open a videochat 'static rooms'
+
+var script = document.createElement("script");
+script.type = "text/javascript";
+
+// Basic - setting up video chat room
+
+var	overlayBasic = document.getElementById('basicRoomOverlay'),
 	popupBasic = document.getElementById('basicPopupRoom'),
-	btnCloseIntermediate = document.getElementById('btn-close-popup1');
+	btnCloseBasic = document.getElementById('btn-close-popup1');
 
-btnOpenBasic.addEventListener('click', function(){
-	overlayBasic.classList.add('active');
+    btnCloseBasic.addEventListener('click', function(e){
+    e.preventDefault();
+    overlayBasic.classList.remove('active');
+    popupBasic.classList.remove('active');
+
+    window.location.reload();
+});
+
+ function* startBasicRoom(){
+	
+    overlayBasic.classList.add('active');
 	popupBasic.classList.add('active');
 
-    const iframe = document.getElementById('basicLink');
-    iframe.src = "https://beeooro.com/embedded/i1VJnkrqjeGLAk87bgZl?guestkey=xo7jw";
     
-});
+    yield;
+
+    document.getElementById('visibility').style.display = 'none';
+
+    const name = document.getElementById('name1').value
+    const person = new Participants({name: name, roomLevel: 'Basic'})
+
+    const config = {
+
+        name: person.name || 'Little bird',
+        meetingId: "kifup_basic",
+        apiKey: "75fcaa7a-c874-4122-9fb4-4541ef22216f",
+    
+        micEnabled: true,
+        webcamEnabled: false,
+        participantCanToggleSelfWebcam: true,
+        participantCanToggleSelfMic: true,
+    
+        chatEnabled: true,
+        screenShareEnabled: true,
+    
+        pollEnabled: true,
+        whiteBoardEnabled: true,
+        raiseHandEnabled: true,
+    
+        brandingEnabled: true,
+        brandLogoURL: "https://kifup.club/images/logo.png",
+        brandName: "Kifup",
+        poweredBy: false,
+    
+        participantCanLeave: false,
+      };
+    
+      const basic = new VideoSDKMeeting();
+      roomList.push(basic);
+      basic.init(config);
+    
+};
+
+const basicStart = startBasicRoom();
+
+// Intermediate - setting up video chat room
+
+var	overlayIntermediate = document.getElementById('intermediateRoomOverlay');
+	popupIntermediate = document.getElementById('intermediatePopupRoom'),
+	btnCloseIntermediate = document.getElementById('btn-close-popup2');
 
 btnCloseIntermediate.addEventListener('click', function(e){
 	e.preventDefault();
 	overlayBasic.classList.remove('active');
 	popupBasic.classList.remove('active');
+
+    window.location.reload();
 });
 
-// Intermediate room
+function* startInterRoom(){
 
-var btnOpenIntermediate = document.getElementById('btn-open-popup2'),
-	overlayIntermediate = document.getElementById('intermediateRoomOverlay');
-	popupIntermediate = document.getElementById('intermediatePopupRoom'),
-	btnCloseIntermediate = document.getElementById('btn-close-popup2');
-
-btnOpenIntermediate.addEventListener('click', function(){
     overlayIntermediate.classList.add('active');
 	popupIntermediate.classList.add('active');
 
-    const iframe2 = document.getElementById('intermediateLink');
-    iframe2.src = "https://beeooro.com/embedded/jVEVVdgCMakCRIeUNXSQ?guestkey=rfvur";
-});
+    yield;
 
-btnCloseIntermediate.addEventListener('click', function(e){
-	e.preventDefault();
-	overlayIntermediate.classList.remove('active');
-	popupIntermediate.classList.remove('active');
-});
+    document.getElementById('visibility2').style.display = 'none';
+
+    const name = document.getElementById('name2').value
+    const person = new Participants({name: name, roomLevel: 'Basic'})
+
+    const config = {
+
+        name: person.name || 'Little bird',
+        meetingId: "kifup_intermediate",
+        apiKey: "75fcaa7a-c874-4122-9fb4-4541ef22216f",
+
+        containerId: null,
+    
+        micEnabled: true,
+        webcamEnabled: false,
+        participantCanToggleSelfWebcam: true,
+        participantCanToggleSelfMic: true,
+    
+        chatEnabled: true,
+        screenShareEnabled: true,
+    
+        pollEnabled: true,
+        whiteBoardEnabled: true,
+        raiseHandEnabled: true,
+    
+        brandingEnabled: true,
+        brandLogoURL: "https://kifup.club/images/logo.png",
+        brandName: "Kifup",
+        poweredBy: false,
+    
+        participantCanLeave: false,
+      };
+    
+      const intermediate = new VideoSDKMeeting();
+      roomList.push(intermediate);
+      intermediate.init(config);
+
+};
+
+const interStart = startInterRoom()
 
 
-// Advanced room
+// Advanced - setting up video chat room
 
-var btnOpenAdvanced = document.getElementById('btn-open-popup3'),
-	overlayAdvanced = document.getElementById('advancedRoomOverlay'),
+
+var	overlayAdvanced = document.getElementById('advancedRoomOverlay'),
 	popupAdvanced = document.getElementById('advancedPopupRoom'),
 	btnCloseAdvanced = document.getElementById('btn-close-popup3');
 
-btnOpenAdvanced.addEventListener('click', function(){
-	overlayAdvanced.classList.add('active');
-	popupAdvanced.classList.add('active');
-
-    const iframe = document.getElementById('advancedLink')
-    iframe.src = "https://tokbox.com/developer/embeds/?room=pep6hf";
-    
-});
 
 btnCloseAdvanced.addEventListener('click', function(e){
 	e.preventDefault();
 	overlayAdvanced.classList.remove('active');
 	popupAdvanced.classList.remove('active');
-    
+    window.location.reload();
 });
 
+function* startAdvancedRoom(){
 
-// Starting video chat 
+    overlayAdvanced.classList.add('active');
+    popupAdvanced.classList.add('active');
 
-var script = document.createElement("script");
-script.type = "text/javascript";
+    yield;
 
-btnOpenAdvanced = document.getElementById('btn-open-popup3'),
+    document.getElementById('visibility3').style.display = 'none';
 
-// When I need this happens
+    const name = document.getElementById('name3').value
+    const person = new Participants({name: name, roomLevel: 'Basic'})
 
+    const config = {
 
-btnOpenAdvanced.addEventListener("click", function (event) {
-
-  const config = {
-    name: "AdvancedLevel",
+    name: person.name || 'Little bird',
     meetingId: "kifup_advanced",
     apiKey: "75fcaa7a-c874-4122-9fb4-4541ef22216f",
 
-    containerId: null,
-
     micEnabled: true,
-    webcamEnabled: true,
+    webcamEnabled: false,
     participantCanToggleSelfWebcam: true,
     participantCanToggleSelfMic: true,
 
@@ -258,30 +309,204 @@ btnOpenAdvanced.addEventListener("click", function (event) {
     participantCanLeave: false,
   };
 
-  const meeting = new VideoSDKMeeting();
-  roomList.push(meeting);
-  meeting.init(config);
+  const advanced = new VideoSDKMeeting();
+  roomList.push(advanced);
+  advanced.init(config);
 
+};
+
+const advancedStart = startAdvancedRoom();
+
+
+// Spanish - setting up video chat room
+
+var	overlaySpanish = document.getElementById('spanishOverlay'),
+	popupSpanish = document.getElementById('spanishPopupRoom'),
+	btnCloseSpanish = document.getElementById('btn-close-popup4');
+
+btnCloseSpanish.addEventListener('click', function(e){
+	e.preventDefault();
+	overlaySpanish.classList.remove('active');
+	popupSpanish.classList.remove('active');
+    window.location.reload();
 });
+
+function* startSpanishRoom(){
+
+    overlaySpanish.classList.add('active');
+    popupSpanish.classList.add('active');
+
+    yield;
+
+    document.getElementById('visibility4').style.display = 'none';
+
+    const name = document.getElementById('name4').value
+    const person = new Participants({name: name, roomLevel: 'Basic'})
+
+    const config = {
+
+    name: person.name || 'Little bird',
+    meetingId: "kifup_spanish",
+    apiKey: "75fcaa7a-c874-4122-9fb4-4541ef22216f",
+
+    micEnabled: true,
+    webcamEnabled: false,
+    participantCanToggleSelfWebcam: true,
+    participantCanToggleSelfMic: true,
+
+    chatEnabled: true,
+    screenShareEnabled: true,
+
+    pollEnabled: true,
+    whiteBoardEnabled: true,
+    raiseHandEnabled: true,
+
+    brandingEnabled: true,
+    brandLogoURL: "https://kifup.club/images/logo.png",
+    brandName: "Kifup",
+    poweredBy: false,
+
+    participantCanLeave: false,
+  };
+
+  const spanish = new VideoSDKMeeting();
+  roomList.push(spanish);
+  spanish.init(config);
+
+};
+
+const spanishStart = startSpanishRoom();
+
+
+// Frennch - setting up video chat room
+
+var	overlayFrench = document.getElementById('frenchOverlay'),
+	popupFrench = document.getElementById('frenchPopupRoom'),
+	btnCloseFrench = document.getElementById('btn-close-popup5');
+
+    btnCloseFrench.addEventListener('click', function(e){
+	e.preventDefault();
+	overlayFrench.classList.remove('active');
+	popupFrench.classList.remove('active');
+    window.location.reload();
+});
+
+function* startFrenchRoom(){
+
+    overlayFrench.classList.add('active');
+    popupFrench.classList.add('active');
+
+    yield;
+
+    document.getElementById('visibility5').style.display = 'none';
+
+    const name = document.getElementById('name5').value
+    const person = new Participants({name: name, roomLevel: 'Basic'})
+
+    const config = {
+
+    name: person.name || 'Little bird',
+    meetingId: "kifup_french",
+    apiKey: "75fcaa7a-c874-4122-9fb4-4541ef22216f",
+
+    micEnabled: true,
+    webcamEnabled: false,
+    participantCanToggleSelfWebcam: true,
+    participantCanToggleSelfMic: true,
+
+    chatEnabled: true,
+    screenShareEnabled: true,
+
+    pollEnabled: true,
+    whiteBoardEnabled: true,
+    raiseHandEnabled: true,
+
+    brandingEnabled: true,
+    brandLogoURL: "https://kifup.club/images/logo.png",
+    brandName: "Kifup",
+    poweredBy: false,
+
+    participantCanLeave: false,
+  };
+
+  const french = new VideoSDKMeeting();
+  roomList.push(french);
+  french.init(config);
+
+};
+
+const frenchStart = startFrenchRoom();
+
+// Arabic - setting up video chat room
+
+var	overlayArabic = document.getElementById('arabicOverlay'),
+	popupArabic = document.getElementById('arabicPopupRoom'),
+	btnCloseFrench = document.getElementById('btn-close-popup6');
+
+    btnCloseFrench.addEventListener('click', function(e){
+	e.preventDefault();
+	overlayArabic.classList.remove('active');
+	popupArabic.classList.remove('active');
+    window.location.reload();
+});
+
+function* startArabicRoom(){
+
+    overlayArabic.classList.add('active');
+    popupArabic.classList.add('active');
+
+    yield;
+
+    document.getElementById('visibility6').style.display = 'none';
+
+    const name = document.getElementById('name6').value
+    const person = new Participants({name: name, roomLevel: 'Arabic'})
+
+    const config = {
+
+    name: person.name || 'Little bird',
+    meetingId: "kifup_arabe",
+    apiKey: "75fcaa7a-c874-4122-9fb4-4541ef22216f",
+
+    micEnabled: true,
+    webcamEnabled: false,
+    participantCanToggleSelfWebcam: true,
+    participantCanToggleSelfMic: true,
+
+    chatEnabled: true,
+    screenShareEnabled: true,
+
+    pollEnabled: true,
+    whiteBoardEnabled: true,
+    raiseHandEnabled: true,
+
+    brandingEnabled: true,
+    brandLogoURL: "https://kifup.club/images/logo.png",
+    brandName: "Kifup",
+    poweredBy: false,
+
+    participantCanLeave: false,
+  };
+
+  const arabic = new VideoSDKMeeting();
+  roomList.push(arabic);
+  arabic.init(config);
+
+};
+
+const arabicStart = startArabicRoom();
+
+
+
+
+
+
+
+
+// Add source to videos script on <head> selector
 
 script.src = "/videosdk.js";
 document.getElementsByTagName("head")[0].appendChild(script);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //===

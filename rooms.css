@@ -8,6 +8,12 @@
     top: 25px;
 }
 
+.u-enable-responsive .menu-collapse a{
+    position: relative;
+    right: -20px;
+    
+}
+
 .room-container{
 
     width: 100%;
@@ -61,8 +67,14 @@
     padding-top: 20px;
 }
 
+
+.btn-start:hover{
+    background-color: #89d0ca;
+    cursor: pointer;
+}
+
 .room{
-    /* border: solid black 1px; */
+    border: solid black .5px;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -71,6 +83,19 @@
     margin: 10px 0px;
     border-radius: 10px;
     background: white;
+    transition: 0.5s ease;
+     -moz-transition: 0.5s ease; /* Firefox */
+     -webkit-transition: 0.5s ease; /* Chrome - Safari */
+     -o-transition: 0.5s ease; /* Opera */
+}
+
+.room:hover{
+    transform : scale(1.1);
+    -moz-transform : scale(1.1); /* Firefox */
+    -webkit-transform : scale(1.1); /* Chrome - Safari */
+    -o-transform : scale(1.1); /* Opera */
+    -ms-transform : scale(1.1); /* IE9 */
+    box-shadow: 2px 2px 20px 2px  black;
 }
 
 .room__container{
@@ -86,6 +111,7 @@
     margin: 0 auto;
     width: 50px;
     height: 50px;
+    border-radius: 3px;
 }
 
 
@@ -112,7 +138,7 @@
 .room-description{
     margin-top: 15px;
     margin-bottom: 0px;
-    font-size: 12px;
+    font-size: 14px;
     text-align: center;
 }
 
@@ -256,6 +282,17 @@
     margin-bottom: 0px;
 }
 
+.tittle-welcome{
+    font-size: 20px;
+    text-align: center;
+    color: #89d0ca !important;
+    font-weight: bold !important;
+}
+
+.sub-tittle-welcome{
+    font-size: 16px;
+}
+
 
 
 /* ------------------------- */
@@ -325,7 +362,7 @@
 
     .room-level{
 
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .room-description{
@@ -343,5 +380,30 @@
     .popup {
 
         width: 40%;
+    }
+
+    .tittle-welcome{
+        font-size: 30px;
+        text-align: center;
+        color: #89d0ca !important;
+        font-weight: bold !important;
+    }
+
+    .sub-tittle-welcome{
+        font-size: 20px;
+    }
+
+    #visibility{
+
+        margin-top: 40px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+
+    .room__header{
+        margin-top: -50px;
+        margin-bottom: 100px;
+        
     }
 }

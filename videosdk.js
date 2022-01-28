@@ -235,11 +235,38 @@ var VideoSDKMeeting = (function () {
                     (e.body.style.margin = "0px"),
                     (e.body.style.padding = "0px"),
                     (e.body.style.height = "100%"),
-                    (e.body.style.overflow = "hidden"),
+                    (e.body.style.overflow = "hidden")
 
                     // Here i put the div that contains the iframe with the embeebed video chat
-                    
-                    document.getElementById('roomContainer').appendChild(P);
+
+                    const listOfRooms = document.getElementsByClassName('roomOverlay');
+
+                    for (let i = 0; i < listOfRooms.length; i++){
+
+                        if(listOfRooms[i].classList.contains("active")){
+
+                            switch(i){
+                                case 0:
+                                    document.getElementById('roomContainer1').appendChild(P);
+                                break;
+                                case 1:
+                                    document.getElementById('roomContainer2').appendChild(P);
+                                break;
+                                case 2:
+                                    document.getElementById('roomContainer3').appendChild(P);
+                                break;
+                                case 3:
+                                    document.getElementById('roomContainer4').appendChild(P);
+                                break;
+                                case 4:
+                                    document.getElementById('roomContainer5').appendChild(P);
+                                break;
+                                case 5:
+                                    document.getElementById('roomContainer6').appendChild(P);
+                                break;
+                            }
+                        }
+                    }
                 }
                 n.addEventListener("popstate", function (e) {
                   W.remove();
@@ -263,7 +290,3 @@ var VideoSDKMeeting = (function () {
       e
     );
   })();
-
-
-  exports.VideoSDKMeeting = VideoSDKMeeting;
-  
