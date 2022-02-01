@@ -1,4 +1,3 @@
-# kifup
-English project with +8k members, We help people to learn and improve their English skills for free.
+Keep it fun! This is an English Community w/ up to 10k members. Just find a parner and start to improve your English skills now.
 
-Check our the website here https://devmangel.github.io/kifup/
+Check my website here https://devmangel.github.io/kifup/
