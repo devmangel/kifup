@@ -304,6 +304,24 @@ Rojo Logo #e85f63
 
 }
 
+.menu-groups{
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+
+.menu-groups a{
+  margin-top: 50px;
+}
+
+.menu-groups a:hover{
+  transform: scale(1.5); 
+  transition-duration: 1s;
+}
+
+
+
+
 .fb{
 
   background: url(./images/fb.png);

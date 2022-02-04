@@ -211,7 +211,7 @@ var VideoSDKMeeting = (function () {
                   encodeURIComponent("boolean" == typeof A && A);
                 (E.src = T),
                   (E.allowfullscreen = !0),
-                  (E.width = "100%"),
+                  (E.width = "90%"),
                   (E.height = "90%"),
                   (E.allow =
                     "camera *; microphone *; fullscreen; display-capture; allow-same-origin; allow-presentation; encrypted-media; midi; encrypted-media "),

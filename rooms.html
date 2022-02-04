@@ -65,14 +65,29 @@
                         <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
                           <div class="u-sidenav-overflow">
                             <div class="u-menu-close">
-
                             </div>
-                              <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
-                              <li class="u-nav-item nav-item-list">
-                                <a class="u-button-style u-nav-link item__list" href="https://chat.whatsapp.com/JUZL8LsLcqfKcYzGO7lR85" target="_blank" style="padding: 10px 20px;">Whatsapp</a>
-                                <a class="u-button-style u-nav-link item__list" href="https://t.me/kifupenglish" target="_blank" style="padding: 10px 20px; ">Telegram</a>
-                                <a class="u-button-style u-nav-link item__list" href="https://www.facebook.com/groups/ConversationClubEnglish" target="_blank" style="padding: 10px 20px;">Facebook</a>
-                                <a class="u-button-style u-nav-link item__list" href="https://discord.gg/egDBwVvq" target="_blank" style="padding: 10px 20px;">Discord</a>
+
+                            <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+
+                              <li class="u-nav-item nav-item-list menu-groups">
+
+                                <h5><b>Social Media <br>Groups</b></h5>
+
+                                <a href="https://www.facebook.com/groups/ConversationClubEnglish" target="blank_">
+                                  <span class="social-media fb"></span>
+
+                                <a href="https://chat.whatsapp.com/JUZL8LsLcqfKcYzGO7lR85" target="blank_">
+                                  <span class="social-media ws"></span>
+                                </a>
+
+                                <a href="https://t.me/kifupenglish" target="blank_">
+                                  <span class="social-media tg"></span>
+                                </a>
+                                
+                                <a href="https://discord.gg/f5v3Pkdr8P" target="blank_">
+                                  <span class="social-media ds"></span>
+                                 </a>
+
                               </li>
                             </ul>
               </div>
@@ -90,7 +105,7 @@
               <header class="room__header">
                 <a class="btn-room__header btn-create" id="btn-abrir-popup">Create new room</a>
                 <a class="btn-room__header btn-buy" href="https://www.buymeacoffee.com/dev.mangel" target="_blank" >Buy me a Coffee</a>
-                <a class="btn-room__header btn-wap" href="https://chat.whatsapp.com/JUZL8LsLcqfKcYzGO7lR85" target="_blank" >WhatsApp group</a>
+                <a class="btn-room__header btn-wap" href="https://chat.whatsapp.com/JUZL8LsLcqfKcYzGO7lR85" target="_blank" >Join WhatsApp</a>
               </header>
                 <div class="room__body" id="roomQueue">
 
@@ -202,11 +217,14 @@
     <div class="overlay roomOverlay" id="basicRoomOverlay">
       <div class="popup roomPopup" id="basicPopupRoom">
         <a href="#" id="btn-close-popup1" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-          <h6 class="tittle-welcome">Welcome to Kifup Rooms</h6>
-          <h6 class="sub-tittle-welcome">Be nice and polite. Thanks!</62>
+          <h6 class="tittle-welcome">Welcome to Basic Room</h6>
+          <h6 class="sub-tittle-welcome">Be nice and polite. Thanks!</h6>
           <div id="visibility">
-            <input type="name" id="name1" placeholder="What's your name" style="text-align: center; outline: none; margin-top: 20px; width: 300px; border-radius: 5px;">
+            <input type="name" id="name1" placeholder="What's your name?" style="text-align: center; outline: none; margin-top: 20px; width: 300px; border-radius: 5px;">
             <button onclick="basicStart.next()" style="width: 100px; margin-top: 20px; border-radius: 5px;" class="btn-start">Start</button>
+            <section class="popup-gif">
+              <img src="./images/pacman.gif" alt="waiting for the english room" style="margin-top: 50px;">
+            </section>
           </div>
           <section id="roomContainer1"></section>
       </div>
@@ -216,11 +234,14 @@
     <div class="overlay roomOverlay" id="intermediateRoomOverlay">
       <div class="popup roomPopup" id="intermediatePopupRoom">
         <a href="#" id="btn-close-popup2" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-        <h6 class="tittle-welcome">Welcome to Kifup Rooms</h6>
+        <h6 class="tittle-welcome">Welcome to Intermediate Room</h6>
         <h6 class="sub-tittle-welcome">Be nice and polite. Thanks!</62>
           <div id="visibility2">
             <input type="name" id="name2" placeholder="What's your name" style="text-align: center; outline: none; margin-top: 20px; width: 300px; border-radius: 5px;">
             <button onclick="interStart.next()" style="width: 100px; margin-top: 20px; border-radius: 5px;" class="btn-start">Start</button>
+            <section class="popup-gif">
+              <img src="./images/pacman.gif" alt="waiting for the english room" style="margin-top: 50px;">
+            </section>
           </div>
           <section id="roomContainer2"></section>
       </div>
@@ -231,11 +252,14 @@
     <div class="overlay roomOverlay" id="advancedRoomOverlay">
       <div class="popup roomPopup" id="advancedPopupRoom">
         <a href="#" id="btn-close-popup3" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-        <h6 class="tittle-welcome">Welcome to Kifup Rooms</h6>
+        <h6 class="tittle-welcome">Welcome to Advanced Rooms</h6>
         <h6 class="sub-tittle-welcome">Be nice and polite. Thanks!</62>
           <div id="visibility3">
             <input type="name" id="name3" placeholder="What's your name" style="text-align: center; outline: none; margin-top: 20px; width: 300px; border-radius: 5px;">
             <button onclick="advancedStart.next()" style="width: 100px; margin-top: 20px; border-radius: 5px;" class="btn-start">Start</button>
+            <section class="popup-gif">
+              <img src="./images/pacman.gif" alt="waiting for the english room" style="margin-top: 50px;">
+            </section>
           </div>
           <section id="roomContainer3"></section>
       </div>
@@ -247,11 +271,14 @@
     <div class="overlay roomOverlay" id="spanishOverlay">
       <div class="popup roomPopup" id="spanishPopupRoom">
         <a href="#" id="btn-close-popup4" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-        <h6 class="tittle-welcome">Welcome to Kifup Rooms</h6>
-        <h6 class="sub-tittle-welcome">Be nice and polite. Thanks!</62>
+        <h6 class="tittle-welcome">Bienvenid@ a la sala en Español</h6>
+        <h6 class="sub-tittle-welcome">Se amable y cortés, gracias!</62>
           <div id="visibility4">
             <input type="name" id="name4" placeholder="What's your name" style="text-align: center; outline: none; margin-top: 20px; width: 300px; border-radius: 5px;">
             <button onclick="spanishStart.next()" style="width: 100px; margin-top: 20px; border-radius: 5px;" class="btn-start">Start</button>
+            <section class="popup-gif">
+              <img src="./images/pacman.gif" alt="waiting for the english room" style="margin-top: 50px;">
+            </section>
           </div>
           <section id="roomContainer4"></section>
       </div>
@@ -262,11 +289,14 @@
     <div class="overlay roomOverlay" id="frenchOverlay">
       <div class="popup roomPopup" id="frenchPopupRoom">
         <a href="#" id="btn-close-popup5" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-        <h6 class="tittle-welcome">Welcome to Kifup Rooms</h6>
-        <h6 class="sub-tittle-welcome">Be nice and polite. Thanks!</62>
+        <h6 class="tittle-welcome">Bienvenue à la chambre française</h6>
+        <h6 class="sub-tittle-welcome">Soyez gentil et poli. Merci!</62>
           <div id="visibility5">
             <input type="name" id="name5" placeholder="What's your name" style="text-align: center; outline: none; margin-top: 20px; width: 300px; border-radius: 5px;">
             <button onclick="frenchStart.next()" style="width: 100px; margin-top: 20px; border-radius: 5px;" class="btn-start">Start</button>
+            <section class="popup-gif">
+              <img src="./images/pacman.gif" alt="waiting for the english room" style="margin-top: 50px;">
+            </section>
           </div>
           <section id="roomContainer5"></section>
       </div>
@@ -282,6 +312,9 @@
           <div id="visibility6">
             <input type="name" id="name6" placeholder="What's your name" style="text-align: center; outline: none; margin-top: 20px; width: 300px; border-radius: 5px;">
             <button onclick="arabicStart.next()" style="width: 100px; margin-top: 20px; border-radius: 5px;" class="btn-start">Start</button>
+            <section class="popup-gif">
+              <img src="./images/pacman.gif" alt="waiting for the english room" style="margin-top: 50px;">
+            </section>
           </div>
           <section id="roomContainer6"></section>
       </div>
