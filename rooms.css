@@ -304,7 +304,8 @@
 }
 
 #videosdk-frame{
-    height: 83%;
+    height: 110%;
+    width: 100%;
     margin-top: 10px;
 }
 
@@ -312,12 +313,11 @@
     height: auto;
 }
 
+
+
 #visibility, #visibility2, #visibility3, #visibility4, #visibility5, #visibility6 {
     margin-top: 50px;
 }
-
-
-
 
 
 /* ------------------------- */
@@ -413,20 +413,25 @@
     }
 
     .tittle-welcome{
-        font-size: 30px;
+        font-size: 35px;
         text-align: center;
         color: #89d0ca !important;
         font-weight: bold !important;
     }
 
     .sub-tittle-welcome{
-        font-size: 20px;
+        font-size: 30px;
     }
 
     #visibility{
 
         margin-top: 40px;
     }
+
+    .popup-gif img{
+        height: 500px;
+    }
+
 }
 
 @media screen and (min-width: 1200px){
@@ -446,6 +451,10 @@
         height: 130%;
     }
 
+    #visibility input, #visibility2 input, #visibility3 input, #visibility4 input, #visibility5 input, #visibility6 input{
+        width: 500px !important;
+    }
+
 
 }
 
@@ -453,7 +462,7 @@
 
     #videosdk-frame{
         margin-top: 20px;
-        height: 200%;
+        height: 130%;
     }
 
 
