@@ -74,6 +74,11 @@ Rojo Logo #e85f63
   padding: 0;
 }
 
+header{
+  margin-bottom: 0px !important;
+  padding-bottom: 30px;
+}
+
 .img__header{
 
   left: -30px;
@@ -359,6 +364,7 @@ Rojo Logo #e85f63
 
       left: 100px;
   }
+
 
 
   .img__header{
