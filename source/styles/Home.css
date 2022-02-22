@@ -1,10 +1,11 @@
-/* 
-Verde Logo #89d0ca
-Rojo Logo #e85f63
- */
+:root{
+  --primary-color: #89d0ca;
+  --secundary-color: #e85f63;
+}
+
 .logo-design:hover{
 
-  color: #e85f63;
+  color: var(--secundary-color);
 }
 .logo-design{
 
@@ -12,7 +13,7 @@ Rojo Logo #e85f63
 }
 .u-section-1 {
   min-height: 731px;
-  background-image: url("images/f11de0f4-f885-ea85-b5cd-4a7f2abced16.jpg");
+  background-image: url("../../images/f11de0f4-f885-ea85-b5cd-4a7f2abced16.jpg");
   background-position: 50% 50%;
 }
 
@@ -90,7 +91,7 @@ header{
 
 .tittle{
   text-align: center;
-  color: #89d0ca;
+  color: var(--primary-color);
   font-weight: bold !important;
   font-size: 16px !important;
 }
@@ -109,7 +110,7 @@ header{
 
 
 .u-section-1 .u-image-1 {
-  background-image: url("images/-min.jpg");
+  background-image: url("../../images/-min.jpg");
   background-position: 0% 50%;
   min-height: 731px;
   position: relative;
@@ -164,7 +165,7 @@ header{
 
 .u-sidenav-overflow{
 
-  background-color: #89d0ca;
+  background-color: var(--primary-color);
   font-weight: 500;
 
 }
@@ -223,28 +224,28 @@ header{
 
   font-size: 30px;
   font-weight: bold;
-  color: #89d0ca;
+  color: var(--primary-color);
 }
 
 #hours{
 
   font-size: 30px;
   font-weight: bold;
-  color: #89d0ca;
+  color: var(--primary-color);
 }
 
 #minutes{
 
   font-size: 30px;
   font-weight: bold;
-  color: #89d0ca;
+  color: var(--primary-color);
 }
 
 #seconds{
 
   font-size: 25px;
   font-weight: bold;
-  color: #89d0ca;
+  color: var(--primary-color);
 }
 
 .clic-here{
@@ -254,14 +255,100 @@ header{
 
 .clic-here a{
 
-  color: #89d0ca;
+  color: var(--primary-color);
   font-weight: bold;
 }
+
+.header__large{
+  margin: 0px;
+  padding: 5px;
+  display: none;
+}
+
+.header__container-large{
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  right: 10%;
+  width: 300px;
+}
+
+.img_header-large{
+  width: 60px;
+  margin-left: 5%;
+}
+
+.header-items-large, .header-items-large a{
+
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--primary-color);
+  width: 200px;
+  text-align: center;
+  list-style-type: none;
+}
+
+.header-items-large:hover{
+
+  color: var(--secundary-color);
+  
+}
+
+
+
+.header-items-large a:hover{
+  color: var(--secundary-color);
+}
+
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  
+  border: none;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 10%;
+  background-color: #f1f1f1;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: var(--secundary-color);
+  border-radius: 10px;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
 
 @media screen and (min-width: 768px){
 
     .u-layout-row{
-      
+
       width: 100%;
     }
 
@@ -269,9 +356,9 @@ header{
 
       left: 20px;
     }
-    
+
     .u-logo{
-  
+
         left: 100px;
     }
 
@@ -279,7 +366,24 @@ header{
 
       text-align: center;
     }
-  
+
+    .u-container-layout-1 h1{
+      font-size: 45px;
+    }
+
+    #sec-85c8{
+
+      display: none;
+    }
+
+    .header__large{
+      display: flex;
+    }
+
+    .header__large a{
+      font-size: 18px;
+    }
+
 }
 
 
@@ -320,7 +424,7 @@ header{
 }
 
 .menu-groups a:hover{
-  transform: scale(1.5); 
+  transform: scale(1.5);
   transition-duration: 1s;
 }
 
@@ -329,22 +433,22 @@ header{
 
 .fb{
 
-  background: url(./images/fb.png);
+  background: url(../../images/fb.png);
   background-size: cover;
 }
 
 .tg{
 
-  background: url(./images/tg.png);
+  background: url(../../images/tg.png);
   background-size: cover;
 }
 
 .ws{
-  background: url(./images/ws.png);
+  background: url(../../images/ws.png);
   background-size: cover;
 }
 .ds{
-  background: url(./images/ds.png);
+  background: url(../../images/ds.png);
   background-size: cover;
 }
 
@@ -359,7 +463,7 @@ header{
 
     width: 70%;
   }
-  
+
   .u-logo{
 
       left: 100px;
@@ -506,7 +610,7 @@ header{
 .u-section-2 .u-image-1 {
   width: 400px;
   height: 427px;
-  background-image: url("images/wef-min.jpg");
+  background-image: url("../../images/wef-min.jpg");
   background-position: 50% 50%;
   margin: -498px auto 0 0;
 }
@@ -767,7 +871,7 @@ header{
 .u-section-3 .u-image-1 {
   width: 542px;
   height: 542px;
-  background-image: url("images/gfg-min.jpg");
+  background-image: url("../../images/gfg-min.jpg");
   background-position: 50% 50%;
   margin: 0 auto;
 }
@@ -1055,7 +1159,7 @@ header{
 
 .u-section-5 .u-image-1 {
   min-height: 604px;
-  background-image: url("images/fsae-min.jpg");
+  background-image: url("../../images/fsae-min.jpg");
   background-position: 50% 50%;
 }
 
@@ -1231,7 +1335,7 @@ header{
 
 .u-section-6 .u-image-1 {
   min-height: 417px;
-  background-image: url("images/t.jpg");
+  background-image: url("../../images/t.jpg");
   background-position: 50% 50%;
 }
 
@@ -1241,7 +1345,7 @@ header{
 
 .u-section-6 .u-image-2 {
   min-height: 258px;
-  background-image: url("images/rty-min.jpg");
+  background-image: url("../../images/rty-min.jpg");
   background-position: 50% 50%;
 }
 
@@ -1294,7 +1398,7 @@ header{
 
 .u-section-6 .u-image-3 {
   min-height: 292px;
-  background-image: url("images/pexels-photo-6412481.jpeg");
+  background-image: url("../../images/pexels-photo-6412481.jpeg");
   background-position: 50% 50%;
 }
 
@@ -1305,7 +1409,7 @@ header{
 .u-section-6 .u-image-4 {
   min-height: 383px;
   width: 100%;
-  background-image: url("images/w3-min.jpg");
+  background-image: url("../../images/w3-min.jpg");
   background-position: 50% 50%;
 }
 

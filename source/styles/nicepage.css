@@ -359,16 +359,7 @@ span.fr-img-caption.fr-view {
     span.fr-img-caption.fr-view.fr-dii.fr-fir {
       float: right;
       margin: 5px 0 5px 5px;
-      max-width: calc(100% - 5px); }
-/*end-commonstyles library*//*begin-commonstyles library*/@charset "UTF-8";
-
-/*!
- * animate.css -https://daneden.github.io/animate.css/
- * Version - 3.7.2
- * Licensed under the MIT license - http://opensource.org/licenses/MIT
- *
- * Copyright (c) 2019 Daniel Eden
- */
+      max-width: calc(100% - 5px); 
 
 @-webkit-keyframes bounce {
   from,
@@ -434,6 +425,7 @@ span.fr-img-caption.fr-view {
     -webkit-transform: translate3d(0, -4px, 0);
     transform: translate3d(0, -4px, 0);
   }
+}
 }
 
 .bounce {

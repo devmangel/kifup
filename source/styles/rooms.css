@@ -1,3 +1,4 @@
+
 .kifup-logo-words{
 
     margin: 0px !important;
@@ -82,7 +83,6 @@
 }
 
 .room{
-    border: solid black .5px;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -90,7 +90,7 @@
     height: 180px;
     margin: 10px 0px;
     border-radius: 10px;
-    background: white;
+    background: #f1f1f1;
     transition: 0.5s ease;
      -moz-transition: 0.5s ease; /* Firefox */
      -webkit-transition: 0.5s ease; /* Chrome - Safari */
@@ -117,9 +117,9 @@
 
 .room-icon{
     margin: 0 auto;
-    width: 50px;
-    height: 50px;
-    border-radius: 3px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
 }
 
 
@@ -166,6 +166,23 @@
     color: white;
 }
 
+.btn-exit-room{
+
+    background-color: white;
+    color: var(--secundary-color);
+    cursor: pointer;
+    padding: 1px;
+    border: var(--secundary-color) 1px solid;
+    border-radius: 5px;
+    width: 70px;
+    height: 30px;
+}
+
+
+.btn-exit-room:hover{
+    background: var(--secundary-color);
+    color: white;
+}
 
 .gif-container{
     display: flex;
@@ -295,7 +312,7 @@
     text-align: center;
     color: #89d0ca !important;
     font-weight: bold !important;
-    margin: 0px !important;
+    margin: 20px 0px 0px 0px !important;
 }
 
 .sub-tittle-welcome{
@@ -309,9 +326,65 @@
     margin-top: 10px;
 }
 
-.popup-gif{
-    height: auto;
-}
+
+/* Kifup Animation */
+
+  
+  .gradient-text {
+
+    margin-top: 50px !important;
+    font-weight: bold !important;
+
+    color: transparent;
+    background: conic-gradient(
+      #D9D7F1 12%, 
+      #BAABDA 12%, #BAABDA 33%, 
+      #E7FBBE 33%, #E7FBBE 55%, 
+      #FFCBCB 55%, #FFCBCB 70%, 
+      #B5DEFF 70%, #e85f63 87%, 
+      #89d0ca 87%);
+    background-size: 50%;
+    background-clip: text;  
+    -webkit-background-clip: text;
+  
+    animation: expand-rev 0.5s ease forwards;
+  
+    cursor: pointer;
+  }
+  
+  .gradient-text:hover {
+    animation: expand 0.5s ease forwards;
+  }
+  
+  @keyframes expand {
+    0% {
+      background-size: 50%;
+      background-position: 0 0;
+    }
+    20% {
+      background-size: 55%;
+      background-position: 0 1em;
+    }
+    100% {
+      background-size: 325%;
+      background-position: -10em -4em;
+    }
+  }
+  
+  @keyframes expand-rev {
+    0% {
+      background-size: 325%;
+      background-position: -10em -4em;
+    }
+    20% {
+      background-size: 55%;
+      background-position: 0 1em;
+    }
+    100% {
+      background-size: 50%;
+      background-position: 0 0;
+    }
+  }
 
 
 
@@ -357,6 +430,90 @@
 	to { opacity: 1; }
 }
 
+.header__large{
+    margin: 0px;
+    padding: 5px;
+    display: none;
+  }
+  
+  .header__container-large{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    right: 10%;
+    width: 300px;
+  }
+  
+  .img_header-large{
+    width: 60px;
+    margin-left: 5%;
+  }
+  
+  .header-items-large, .header-items-large a{
+  
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--primary-color);
+    width: 200px;
+    text-align: center;
+    list-style-type: none;
+  }
+  
+  .header-items-large:hover{
+  
+    color: var(--secundary-color);
+    
+  }
+  
+  
+  
+  .header-items-large a:hover{
+    color: var(--secundary-color);
+  }
+  
+  
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    
+    border: none;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 10%;
+    background-color: #f1f1f1;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    color: var(--secundary-color);
+    border-radius: 10px;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
 
 
 @media screen and (min-width: 600px){
@@ -382,6 +539,10 @@
         height: 73%;
         width: 100%;
     }
+
+    .header__large{
+        display: flex;
+    }
 }
 
 @media screen and (min-width: 1000px){
@@ -393,6 +554,7 @@
     .room-level{
 
         font-size: 16px;
+        line-height: 20px;
     }
 
     .room-description{
