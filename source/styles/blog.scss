@@ -1,3 +1,35 @@
+footer{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+
+  .footer-conatiner{
+      display: flex;
+  }
+
+  .quizby{
+    margin-right: 5px;
+  }
+}
+
+.english-test{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+ 
+
+  .efset-container{
+
+    height: 700px;
+
+    .efset-website{
+
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+}
+  
+
 
 .header__container-large{
   margin-top: 20px;
@@ -196,3 +228,4 @@ $textCub: cubic-bezier(.48,.43,.7,2.5);
     display: none;
   }
 }
+

@@ -1,3 +1,33 @@
+footer {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footer-conatiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .quizby {
+  margin-right: 5px;
+}
+
+.english-test {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.english-test .efset-container {
+  height: 700px;
+}
+
+.english-test .efset-container .efset-website {
+  height: 100%;
+  width: 100%;
+}
+
 .header__container-large {
   margin-top: 20px;
 }

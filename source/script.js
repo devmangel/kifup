@@ -43,6 +43,7 @@ class Participants{
 }
 
 
+
 // Array with the active rooms global scope
 
 const roomList = [];
@@ -155,7 +156,6 @@ var	overlayBasic = document.getElementById('basicRoomOverlay'),
 	
     overlayBasic.classList.add('active');
 	popupBasic.classList.add('active');
-
     
     yield;
 
@@ -191,8 +191,8 @@ var	overlayBasic = document.getElementById('basicRoomOverlay'),
       };
     
       const basic = new VideoSDKMeeting();
-      roomList.push(basic);
       basic.init(config);
+      addVisitor(keyword);
     
 };
 
@@ -506,6 +506,7 @@ const arabicStart = startArabicRoom();
 script.src = "/videosdk.js";
 document.getElementsByTagName("head")[0].appendChild(script);
 
+const dinamicKey = '621a79cd34fd621565858a02';
 
 // Alert when subit registration form
 
@@ -533,3 +534,41 @@ function limpiar(){
 
     return false;
 };
+
+let visits = 0;
+
+async function addVisitor(level){
+
+    let request;
+
+    switch (level) {
+        case 'basic':
+            request = 'basic';
+          break;
+    }
+
+    await fetch("https://kifup-bc91.restdb.io/rest/visits",{
+        method: 'GET',
+        "content-type": "application/json",
+        headers: {'x-apikey':dinamicKey}
+    })
+
+    .then(response => response.json())
+    .then(data => {
+        visits = data[0].request;
+        console.log(visits)
+    })
+    .then(visits + 1)
+
+    let data = {
+        level: visits
+    }
+
+    // await fetch("https://kifup-bc91.restdb.io/rest/visits/621a6e860f9df716000dba46",{
+    //     method: 'PUT',
+    //     "content-type": "application/json",
+    //     headers: {'x-apikey': dinamicKey},
+    //     body: JSON.stringify(data)
+    
+    //     })
+    }

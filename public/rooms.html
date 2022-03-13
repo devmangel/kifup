@@ -100,10 +100,11 @@
     <header class="header__large">
       <img src="../images/logo.png" alt="logo kifup" class="img_header-large">
       <ul class="header__container-large">
+        <li class="header-items-large"><a href="../index">Home</a>
         <li class="header-items-large"><a href="../public/rooms">Rooms</a></ol>
         <li class="header-items-large"><a href="../public/blog/welcome">Blog</a></li>
         <li class="header-items-large dropdown" id="groups-item">
-          <a href="#" class="dropbtn" >Groups</a>
+          <a href="#" class="dropbtn" onclick="addVisitor('basic')">Groups</a>
           <div class="dropdown-content">
             <a href="https://chat.whatsapp.com/KSwV0NPO75GKsLijI97AYg" target="blank_">Whatsapp</a>
             <a href="https://t.me/kifupenglish" target="blank_">Telegram</a>
@@ -131,7 +132,7 @@
                     <div class='room__container'>
                       <img src='../images/basic.jpg' alt='english room' class='room-icon'>
                       <div class='room-text__container'>
-                        <h6 class='room-level'>Basic English Room</h6>
+                        <h6 class='room-level'> Basic English Room</h6>
                         <h6 class='room-description'>Best room to start learning and practicing the basics here! </h6>
                       </div>
                     </div>
@@ -143,7 +144,7 @@
                     <div class='room__container'>
                       <img src='../images/flag-english.png' alt='english room' class='room-icon'>
                       <div class='room-text__container'>
-                        <h6 class='room-level'>English Intermediate Room</h6>
+                        <h6 class='room-level'> Intermediate English Room</h6>
                         <h6 class='room-description'>This room works if you are intermediate level, find a pertner and keep it up</h6>
                       </div>
                     </div>
@@ -155,7 +156,7 @@
                     <div class='room__container'>
                       <img src='../images/english.jpg' alt='english room' class='room-icon'>
                       <div class='room-text__container'>
-                        <h6 class='room-level'>English Advanced Room</h6>
+                        <h6 class='room-level'> Advanced English Room </h6>
                         <h6 class='room-description'>Almost a native speaker? try to improve your english skills here</h6>
                       </div>
                     </div>
@@ -167,8 +168,8 @@
                     <div class='room__container'>
                       <img src='../images/spanish.jpg' alt='sala en español' class='room-icon'>
                       <div class='room-text__container'>
-                        <h6 class='room-level'>Spanish Room</h6>
-                        <h6 class='room-description'>Mexico, Colombia, Argentina, Ecuador, España, Peru, Guatemala, El Salvador</h6>
+                        <h6 class='room-level'>Front-end Room</h6>
+                        <h6 class='room-description'>Are you working or learning about software development? Here is your room</h6>
                       </div>
                     </div>
                     <button class='btn__join-room' onclick="spanishStart.next()">Entrar</button>
@@ -178,8 +179,8 @@
                     <div class='room__container'>
                       <img src='../images/french.jpg' alt='french room' class='room-icon'>
                       <div class='room-text__container'>
-                        <h6 class='room-level'>French Room</h6>
-                        <h6 class='room-description'>Améliorez vos compétences dans la langue la plus romantique du monde</h6>
+                        <h6 class='room-level'>Data Room</h6>
+                        <h6 class='room-description'>Data analyst, data science, data engineer, machine learning engineer join at here</h6>
                       </div>
                     </div>
                     <button class='btn__join-room' onclick="frenchStart.next()">Montez</button>
@@ -190,8 +191,8 @@
                     <div class='room__container'>
                       <img src='../images/arabic.jpg' alt='arabic room' class='room-icon'>
                       <div class='room-text__container'>
-                        <h6 class='room-level'>Arabic Room</h6>
-                        <h6 class='room-description'>Here you can improve your Arabic skills</h6>
+                        <h6 class='room-level'>Backend Room</h6>
+                        <h6 class='room-description'>Back on the server, let's talk about that. Python, C++, C, Java and so on</h6>
                       </div>
                     </div>
                     <button class='btn__join-room' onclick="arabicStart.next()">Join</button>
