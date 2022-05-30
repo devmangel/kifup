@@ -365,6 +365,7 @@ header{
     .u-container-style .u-container-layout .fix-subtittle{
 
       text-align: center;
+      color: var(--secundary-color) !important;
     }
 
     .u-container-layout-1 h1{
