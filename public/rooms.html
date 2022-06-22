@@ -58,7 +58,7 @@
           <div class="u-custom-menu u-nav-container">
             <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Page-1.html" style="padding: 10px 0px;">Whatsapp</a>
               <a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Page-1.html" style="padding: 10px 0px;">Whatsapp</a>
-                </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Home.html" style="padding: 10px 0px;">Home</a>
+                </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Home.html" style="padding: 10px 0px;">Inicio</a>
                   </li></ul>
                     </div>
                       <div class="u-custom-menu u-nav-container-collapse">
@@ -100,11 +100,11 @@
     <header class="header__large">
       <img src="../images/logo.png" alt="logo kifup" class="img_header-large">
       <ul class="header__container-large">
-        <li class="header-items-large"><a href="../index">Home</a>
-        <li class="header-items-large"><a href="../public/rooms">Rooms</a></ol>
+        <li class="header-items-large"><a href="../index">Inicio</a>
+        <li class="header-items-large"><a href="../public/rooms">Salas</a></ol>
         <li class="header-items-large"><a href="../public/blog/welcome">Test</a></li>
         <li class="header-items-large dropdown" id="groups-item">
-          <a href="#" class="dropbtn" onclick="addVisitor('basic')">Groups</a>
+          <a href="#" class="dropbtn" onclick="addVisitor('basic')">Grupos</a>
           <div class="dropdown-content">
             <a href="https://chat.whatsapp.com/KSwV0NPO75GKsLijI97AYg" target="blank_">Whatsapp</a>
             <a href="https://t.me/kifupenglish" target="blank_">Telegram</a>
@@ -120,9 +120,9 @@
           <div class="u-container-layout u-valign-middle ">
             <section class="room-container">
               <header class="room__header">
-                <a class="btn-room__header btn-create" id="btn-abrir-popup">Create new room</a>
-                <a class="btn-room__header btn-buy" href="https://www.buymeacoffee.com/dev.mangel" target="_blank" >Buy me a Coffee</a>
-                <a class="btn-room__header btn-wap" href="https://chat.whatsapp.com/KSwV0NPO75GKsLijI97AYg" target="_blank" >Join WhatsApp</a>
+                <a class="btn-room__header btn-create" id="btn-abrir-popup">Crea una nueva sala</a>
+                <a class="btn-room__header btn-buy" href="https://www.buymeacoffee.com/dev.mangel" target="_blank" >Apoya este proyecto</a>
+                <a class="btn-room__header btn-wap" href="https://chat.whatsapp.com/KSwV0NPO75GKsLijI97AYg" target="_blank" >Grupo de WhatsApp</a>
               </header>
                 <div class="room__body" id="roomQueue">
 
@@ -132,11 +132,11 @@
                     <div class='room__container'>
                       <img src='../images/basic.jpg' alt='english room' class='room-icon'>
                       <div class='room-text__container'>
-                        <h6 class='room-level'> Basic English Room</h6>
-                        <h6 class='room-description'>Best room to start learning and practicing the basics here! </h6>
+                        <h6 class='room-level'>Sala: Desde cero</h6>
+                        <h6 class='room-description'>Esta es una sala para personas que quieren practicar lo mas basico en ingles</h6>
                       </div>
                     </div>
-                    <button class='btn__join-room' onclick="basicStart.next()">Join</button>
+                    <button class='btn__join-room' onclick="basicStart.next()">Entrar</button>
                   </div>
                   <!-- Intermediate room HTML -->
 
@@ -144,11 +144,11 @@
                     <div class='room__container'>
                       <img src='../images/flag-english.png' alt='english room' class='room-icon'>
                       <div class='room-text__container'>
-                        <h6 class='room-level'> Intermediate English Room</h6>
-                        <h6 class='room-description'>This room works if you are intermediate level, find a pertner and keep it up</h6>
+                        <h6 class='room-level'>Sala: Nivel Intermedio</h6>
+                        <h6 class='room-description'>Sala para personas con nivel intermedio de ingles, mejora mientras socializas</h6>
                       </div>
                     </div>
-                    <button class='btn__join-room' onclick="interStart.next()">Join</button>
+                    <button class='btn__join-room' onclick="interStart.next()">Entrar</button>
                   </div>
 
                   <!-- Advanced room HTML -->
@@ -156,11 +156,11 @@
                     <div class='room__container'>
                       <img src='../images/english.jpg' alt='english room' class='room-icon'>
                       <div class='room-text__container'>
-                        <h6 class='room-level'> Advanced English Room </h6>
-                        <h6 class='room-description'>Almost a native speaker? try to improve your english skills here</h6>
+                        <h6 class='room-level'>Sala: Nivel avanzado</h6>
+                        <h6 class='room-description'>Si eres nivel avanzado esta es tu sala, pasate el rato conociendo y aprendiendo personas</h6>
                       </div>
                     </div>
-                    <button class='btn__join-room' onclick="advancedStart.next()">Join</button>
+                    <button class='btn__join-room' onclick="advancedStart.next()">Entrar</button>
                   </div>
 
                    <!-- Spanish room HTML -->
@@ -168,8 +168,8 @@
                     <div class='room__container'>
                       <img src='../images/spanish.jpg' alt='sala en español' class='room-icon'>
                       <div class='room-text__container'>
-                        <h6 class='room-level'>Front-end Room</h6>
-                        <h6 class='room-description'>Are you working or learning about software development? Here is your room</h6>
+                        <h6 class='room-level'>Sala en Español</h6>
+                        <h6 class='room-description'>Practica o simplemente conoce personas mientras hablas español</h6>
                       </div>
                     </div>
                     <button class='btn__join-room' onclick="spanishStart.next()">Entrar</button>
